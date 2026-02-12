@@ -55,18 +55,18 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                                 onClick={onClose}
                                 className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/') ? 'text-lime-400' : 'text-white'}`}
                             >
-                                {t?.home || "HOME"}
+                                HOME
                             </Link>
                             <Link
                                 href={getPath('/about')}
                                 onClick={onClose}
                                 className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/about') ? 'text-lime-400' : 'text-white'}`}
                             >
-                                {t?.about || "ABOUT"}
+                                OVER ONS
                             </Link>
 
                             <div className="flex flex-col gap-3 py-2 border-l-2 border-white/5 pl-6">
-                                <span className="text-emerald-100/30 text-[10px] font-bold uppercase tracking-[0.4em] mb-2">{t?.products || "PRODUCTS"}</span>
+                                <span className="text-emerald-100/30 text-[10px] font-bold uppercase tracking-[0.4em] mb-2">PRODUCTEN</span>
                                 <Link
                                     href={getPath('/products/all12')}
                                     onClick={onClose}
@@ -88,14 +88,14 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                                 onClick={onClose}
                                 className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/faq') ? 'text-lime-400' : 'text-white'}`}
                             >
-                                {t?.faq || "FAQ"}
+                                FAQ
                             </Link>
                             <Link
                                 href={getPath('/contact')}
                                 onClick={onClose}
                                 className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/contact') ? 'text-lime-400' : 'text-white'}`}
                             >
-                                {t?.contact || "CONTACT"}
+                                CONTACT
                             </Link>
                         </nav>
 
