@@ -103,9 +103,9 @@ const Header: React.FC<HeaderProps> = ({ onOpenSample, onOpenMenu, dict, lang })
                             Ik maak simpele links naar /en en /nl.
                          */}
             <div className="hidden md:flex items-center gap-3 text-xs font-bold uppercase tracking-widest">
-              <Link href="/en" className={`hover:text-lime-400 transition-colors ${lang === 'en' ? 'text-lime-400' : 'text-white/50'}`}>EN</Link>
+              <Link href={pathname.replace(/^\/nl/, '/en').replace(/^\/en/, '/en') || '/en'} className={`hover:text-lime-400 transition-colors ${lang === 'en' ? 'text-lime-400' : 'text-white/50'}`}>EN</Link>
               <span className="text-white/20">|</span>
-              <Link href="/nl" className={`hover:text-lime-400 transition-colors ${lang === 'nl' ? 'text-lime-400' : 'text-white/50'}`}>NL</Link>
+              <Link href={pathname.replace(/^\/en/, '/nl').replace(/^\/nl/, '/nl') || '/nl'} className={`hover:text-lime-400 transition-colors ${lang === 'nl' ? 'text-lime-400' : 'text-white/50'}`}>NL</Link>
             </div>
 
             <button
