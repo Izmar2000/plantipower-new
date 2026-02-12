@@ -37,24 +37,24 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: '100%' }}
                     transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                    className="fixed inset-0 z-[99999] bg-emerald-950/98 backdrop-blur-xl flex flex-col"
+                    className="fixed inset-0 z-[99999] bg-[#011410] flex flex-col"
                 >
                     {/* Header in Menu */}
-                    <div className="flex justify-between items-center px-6 py-6 border-b border-white/10">
-                        <Link href={`/${lang}`} onClick={onClose} className="h-12">
+                    <div className="flex justify-between items-center px-6 py-6 border-b border-white/10 shrink-0">
+                        <Link href={`/${lang}`} onClick={onClose} className="h-12 relative z-50">
                             <img
                                 src="https://irp.cdn-website.com/480e14da/dms3rep/multi/Planti-Power-Logo-.png"
                                 alt="PlantiPower"
-                                className="h-full"
+                                className="h-full object-contain"
                             />
                         </Link>
-                        <button onClick={onClose} className="p-2 text-white hover:text-lime-400 transition-colors">
+                        <button onClick={onClose} className="p-2 text-white hover:text-lime-400 transition-colors relative z-50">
                             <X className="w-8 h-8" />
                         </button>
                     </div>
 
                     {/* Links */}
-                    <nav className="flex-grow flex flex-col justify-center px-8 gap-6 overflow-y-auto">
+                    <nav className="flex-grow flex flex-col justify-start pt-10 px-8 gap-6 overflow-y-auto custom-scrollbar">
                         <Link
                             href={getPath('/')}
                             onClick={onClose}
