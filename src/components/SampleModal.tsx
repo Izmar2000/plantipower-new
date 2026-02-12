@@ -114,12 +114,14 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
 
       <div className="relative w-full max-w-4xl bg-[#011410] md:rounded-[30px] rounded-t-[30px] shadow-2xl flex flex-col max-h-[90vh] md:max-h-[95vh] border border-[#0d2b24] mt-auto md:mt-0">
 
-        {/* Sticky Header with Close Button for Mobile */}
-        <div className="absolute top-0 right-0 p-4 z-50 bg-gradient-to-b from-[#011410] to-transparent w-full flex justify-end rounded-t-[30px] pointer-events-none">
-          <button onClick={onClose} className="pointer-events-auto p-2 rounded-full bg-[#0d2b24] text-white/50 hover:text-white transition-colors shadow-lg">
-            <X className="w-6 h-6" />
-          </button>
-        </div>
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 z-[100] w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/10 transition-all active:scale-90"
+          aria-label="Close"
+        >
+          <X className="w-6 h-6" />
+        </button>
 
         {isSuccess ? (
           <div className="p-20 text-center flex flex-col items-center justify-center h-full">
