@@ -27,7 +27,14 @@ export function middleware(request: NextRequest) {
     }
 }
 
+/*
+ * Match all request paths except for the ones starting with:
+ * - api (API routes)
+ * - _next/static (static files)
+ * - _next/image (image optimization files)
+ * - favicon.ico (favicon file)
+ * - Any file with an extension (public folder assets)
+ */
 export const config = {
-    // We negeren alle mappen met assets en systeembestanden
-    matcher: ['/((?!api|_next/static|_next/image|favicon.ico|images|docs|assets|PP Shield info).*)'],
+    matcher: ['/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)'],
 }
