@@ -24,8 +24,8 @@ const Hero: React.FC<HeroProps> = ({ dict, lang }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Left Column: Text Content */}
-          <div className="relative z-10 flex flex-col justify-center text-center lg:text-left pt-4 lg:pt-0 lg:-mt-14">
-            <h1 className="font-outfit font-bold uppercase text-4xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-[0.04em] leading-[1.02] text-left mb-8 md:mb-10">
+          <div className="relative z-20 flex flex-col justify-center text-center lg:text-left pt-4 lg:pt-0 lg:-mt-14">
+            <h1 className="font-outfit font-bold uppercase text-4xl sm:text-5xl lg:text-5xl xl:text-7xl tracking-[0.04em] leading-[1.02] text-left mb-8 md:mb-10">
               <span className="text-emerald-400 block whitespace-normal xl:whitespace-nowrap">{t.titleLine1}</span>
               <span className="text-white block whitespace-normal xl:whitespace-nowrap">{t.titleLine2}</span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-emerald-400 whitespace-normal xl:whitespace-nowrap block">
@@ -69,7 +69,7 @@ const Hero: React.FC<HeroProps> = ({ dict, lang }) => {
           </div>
 
           {/* Right Column: Hero Visual */}
-          <div className="relative flex justify-center items-center lg:justify-end lg:pl-10 pb-12 lg:pb-0 -mt-10 lg:-mt-32">
+          <div className="relative z-0 flex justify-center items-center lg:justify-end lg:pl-10 pb-12 lg:pb-0 -mt-10 lg:-mt-32">
             <div className="relative w-full max-w-[850px] lg:-mr-20">
               <InteractivePlantHero />
             </div>
