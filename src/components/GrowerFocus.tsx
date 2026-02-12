@@ -24,7 +24,7 @@ const GrowerFocus: React.FC<GrowerFocusProps> = ({ onOpenSample, dict }) => {
                             <div className="absolute inset-0 bg-gradient-to-t from-[#011410] via-transparent to-transparent z-10 opacity-70"></div>
                             {/* Ensure image path matches Next.js public folder */}
                             <img
-                                src="/images/grower-happy.jpg"
+                                src="/images/modern-grower-premium.png"
                                 alt="Professional Grower"
                                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                             />
