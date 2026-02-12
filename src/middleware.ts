@@ -15,6 +15,12 @@ function getLocale(request: NextRequest): string | undefined {
 
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname
+
+    // Ignore files (paths with extensions) to prevent redirect loops on assets
+    if (pathname.includes('.')) {
+        return
+    }
+
     const pathnameIsMissingLocale = i18n.locales.every(
         (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
     )
@@ -36,5 +42,5 @@ export function middleware(request: NextRequest) {
  * - Any file with an extension (public folder assets)
  */
 export const config = {
-    matcher: ['/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)'],
+    matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 }
