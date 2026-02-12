@@ -55,7 +55,7 @@ export default async function ProductShield({
             : 'This high-quality foliar feed is applied directly to leaves, stems, flowers, and fruits, allowing nutrients to be absorbed quickly and efficiently exactly where the plant needs them most.',
         ctaDiscover: isNL ? 'ONTDEK MEER' : 'DISCOVER MORE',
         natural: isNL ? '100% NATUURLIJK' : '100% NATURAL',
-        coreSystem: 'Core System',
+        coreSystem: dict.Products.coreSystem,
         protectionTitle: isNL ? <>Ongekende <span className="text-cyan-400">bescherming.</span></> : <>Unprecedented <span className="text-cyan-400">protection.</span></>,
         cards: [
             {
@@ -77,7 +77,7 @@ export default async function ProductShield({
                     : "Directly reduces the impact of extreme heat and drought, resulting in resilient plants while maintaining yield."
             }
         ],
-        advantageBadge: 'The Shield Advantage',
+        advantageBadge: dict.Products.advantageBadgeShield,
         advantageTitle: isNL ? <>Kracht van <br /><span className="text-cyan-400">binnenuit.</span></> : <>Strength from <br /><span className="text-cyan-400">within.</span></>,
         advantageDesc: isNL
             ? 'PlantiPower Shield werkt niet door de natuur te forceren, maar door haar eigen systemen te ondersteunen. Het resultaat is een gewas dat zichzelf kan verdedigen en optimaal kan profiteren van de aanwezige nutriënten.'
@@ -98,7 +98,7 @@ export default async function ProductShield({
             { step: "02", title: isNL ? "Juiste dosering" : "Correct dosage", desc: isNL ? "Doseer 15 ml PlantiPower Shield per 1 liter water voor een standaard mengverhouding." : "Dose 15 ml PlantiPower Shield per 1 liter of water for a standard mixing ratio." },
             { step: "03", title: isNL ? "Volledige bedekking" : "Full coverage", desc: isNL ? "Bespuit de volledige plant, inclusief de onderzijde van het blad voor maximale bescherming." : "Spray the entire plant, including the underside of the leaves, for maximum protection." }
         ],
-        expertTitle: isNL ? 'Belangrijke instructies' : 'Important instructions',
+        expertTitle: dict.Products.importantInstructions,
         expertItems: [
             { label: isNL ? 'Frequentie' : 'Frequency', text: isNL ? 'Gebruik Shield maximaal éénmaal per week voor een optimaal resultaat.' : 'Use Shield at most once a week for optimal results.' },
             { label: isNL ? 'Oogstfase' : 'Harvest phase', text: isNL ? 'Tot uiterlijk 3 dagen vóór de oogst toepassen.' : 'Apply no later than 3 days before harvest.' }
@@ -106,7 +106,7 @@ export default async function ProductShield({
         disclaimer: isNL
             ? "Shield is veilig voor mens en milieu. Bewaar het product op een donkere plaats bij kamertemperatuur voor behoud van de actieve componenten."
             : "Shield is safe for humans and the environment. Store the product in a dark place at room temperature to preserve active components.",
-        technicalTitle: 'Technical data',
+        technicalTitle: dict.Products.technicalData,
         technicalDesc: isNL
             ? 'Toegang tot de officiële documentatie en specificaties van PlantiPower Shield.'
             : 'Access to the official documentation and specifications of PlantiPower Shield.',

@@ -55,7 +55,7 @@ export default async function ProductAll12({
             : 'Breakthrough in passive transport. Where fulvic acids normally stop at 3 nutrients, ALL12® technology transports the full spectrum.',
         ctaDiscover: isNL ? 'ONTDEK DE KRACHT' : 'DISCOVER THE POWER',
         validated: isNL ? 'GEVALIDEERD' : 'VALIDATED',
-        coreSystem: 'Core System',
+        coreSystem: dict.Products.coreSystem,
         efficiencyTitle: isNL ? <>Maximale <span className="text-lime-400">efficiëntie.</span></> : <>Maximum <span className="text-lime-400">efficiency.</span></>,
         cards: [
             {
@@ -77,13 +77,13 @@ export default async function ProductAll12({
                     : "Get more yield from every drop. Improved uptake efficiency minimizes waste."
             }
         ],
-        spectrumBadge: 'Complete Spectrum Capture',
+        spectrumBadge: dict.Products.spectrumBadge,
         spectrumTitle: isNL ? <>De kracht van <br /><span className="text-lime-500">twaalf elementen.</span></> : <>The power of <br /><span className="text-lime-500">twelve elements.</span></>,
         spectrumDesc: isNL
             ? 'ALL12 technologie zorgt ervoor dat niet alleen de basis, maar ook de meest kritische sporenelementen effectief worden gebonden en getransporteerd.'
             : 'ALL12 technology ensures that not only the basics, but also the most critical trace elements are effectively bound and transported.',
         elementsTotal: isNL ? 'Elementen Totaal' : 'Total Elements',
-        advantageBadge: 'The All12 Advantage',
+        advantageBadge: dict.Products.advantageBadgeAll12,
         advantageTitle: isNL ? <>Revolutionair <br /><span className="text-lime-500">transport.</span></> : <>Revolutionary <br /><span className="text-lime-500">transport.</span></>,
         advantageDesc: isNL
             ? 'PlantiPower All12 is niet zomaar een toevoeging; het is de motor achter je voedingsschema. Door gebruik te maken van nano-transport technologie worden blokkades in de bodem opgeheven en bereiken voedingsstoffen de plant sneller dan ooit tevoren.'
@@ -104,7 +104,7 @@ export default async function ProductAll12({
             { step: "02", title: isNL ? "Optimale dosering" : "Optimal dosage", desc: isNL ? "Gebruik 5 ml PlantiPower All12 per 1 liter voedingswater voor een maximaal effect." : "Use 5 ml PlantiPower All12 per 1 liter of nutrient water for maximum effect." },
             { step: "03", title: isNL ? "Maandelijkse boost" : "Monthly boost", desc: isNL ? "Pas het product éénmaal per maand toe als onderdeel van je reguliere bewateringsschema." : "Apply the product once a month as part of your regular watering schedule." }
         ],
-        expertAdvice: isNL ? 'Expert Advies' : 'Expert Advice',
+        expertAdvice: dict.Products.expertAdvice,
         expertItems: [
             { label: isNL ? 'Synergie' : 'Synergy', text: isNL ? 'All12 werkt optimaal samen met zowel minerale als organische voeding.' : 'All12 works optimally with both mineral and organic nutrition.' },
             { label: 'EC-Check', text: isNL ? 'All12 verhoogt de opname, wat kan leiden tot een lagere benodigde basis-voedingsgift.' : 'All12 increases uptake, which can lead to a lower required base nutrient dose.' },
@@ -113,7 +113,7 @@ export default async function ProductAll12({
         disclaimer: isNL
             ? "PlantiPower All12 is geclassificeerd als niet-gevaarlijk en is 100% veilig bij correct gebruik in professionele kassen en landbouwomgevingen."
             : "PlantiPower All12 is classified as non-hazardous and is 100% safe when used correctly in professional greenhouses and agricultural environments.",
-        technicalTitle: 'Technical data',
+        technicalTitle: dict.Products.technicalData,
         technicalDesc: isNL
             ? 'Toegang tot de officiële documentatie en specificaties van PlantiPower All12.'
             : 'Access to official documentation and specifications of PlantiPower All12.',

@@ -263,5 +263,14 @@
         "macro": "Macro Nutrients",
         "secondary": "Secondary Nutrients",
         "micro": "Micro Nutrients"
+    },
+    "Products": {
+        "coreSystem": "Core System",
+        "technicalData": "Technical Data",
+        "spectrumBadge": "Complete Spectrum Capture",
+        "advantageBadgeAll12": "The All12 Advantage",
+        "advantageBadgeShield": "The Shield Advantage",
+        "expertAdvice": "Expert Advice",
+        "importantInstructions": "Important Instructions"
     }
 }

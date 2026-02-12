@@ -263,5 +263,14 @@
         "macro": "Macro Elementen",
         "secondary": "Secundaire Elementen",
         "micro": "Micro Elementen"
+    },
+    "Products": {
+        "coreSystem": "Kern Systeem",
+        "technicalData": "Technische Gegevens",
+        "spectrumBadge": "Volledige Spectrum Opname",
+        "advantageBadgeAll12": "Het All12 Voordeel",
+        "advantageBadgeShield": "Het Shield Voordeel",
+        "expertAdvice": "Expert Advies",
+        "importantInstructions": "Belangrijke instructies"
     }
 }
