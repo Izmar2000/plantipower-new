@@ -32,88 +32,88 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
     return (
         <>
             {open && (
-                <div
-                    className="fixed inset-0 z-[9999999] bg-[#011410] flex flex-col"
-                >
-                    {/* Header in Menu */}
-                    <div className="flex justify-between items-center px-6 py-4 border-b border-white/10 shrink-0">
-                        <Link href={`/${lang}`} onClick={onClose} className="h-12 relative z-50">
-                            <img
-                                src="https://irp.cdn-website.com/480e14da/dms3rep/multi/Planti-Power-Logo-.png"
-                                alt="PlantiPower"
-                                className="h-full object-contain"
-                            />
-                        </Link>
-                        <button onClick={onClose} className="p-2 text-white hover:text-lime-400 transition-colors relative z-50">
-                            <X className="w-8 h-8" />
-                        </button>
-                    </div>
-
-                    {/* Links */}
-                    <nav className="flex-grow flex flex-col justify-start pt-8 px-8 gap-6 overflow-y-auto custom-scrollbar">
-                        <Link
-                            href={getPath('/')}
-                            onClick={onClose}
-                            className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/') ? 'text-lime-400' : 'text-white'}`}
-                        >
-                            {t.home || "HOME"}
-                        </Link>
-                        <Link
-                            href={getPath('/about')}
-                            onClick={onClose}
-                            className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/about') ? 'text-lime-400' : 'text-white'}`}
-                        >
-                            {t.about || "ABOUT"}
-                        </Link>
-
-                        <div className="flex flex-col gap-3 py-2 border-l-2 border-white/5 pl-6">
-                            <span className="text-emerald-100/30 text-[10px] font-bold uppercase tracking-[0.4em] mb-2">{t.products || "PRODUCTS"}</span>
-                            <Link
-                                href={getPath('/products/all12')}
-                                onClick={onClose}
-                                className={`text-xl font-bold tracking-widest uppercase transition-colors ${isActive('/products/all12') ? 'text-lime-400' : 'text-white'}`}
-                            >
-                                All12
+                <div className="fixed inset-0 z-[9999999] bg-[#011410] overflow-y-auto custom-scrollbar">
+                    <div className="flex flex-col min-h-full">
+                        {/* Header in Menu */}
+                        <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
+                            <Link href={`/${lang}`} onClick={onClose} className="h-12 relative z-50">
+                                <img
+                                    src="https://irp.cdn-website.com/480e14da/dms3rep/multi/Planti-Power-Logo-.png"
+                                    alt="PlantiPower"
+                                    className="h-full object-contain"
+                                />
                             </Link>
-                            <Link
-                                href={getPath('/products/shield')}
-                                onClick={onClose}
-                                className={`text-xl font-bold tracking-widest uppercase transition-colors ${isActive('/products/shield') ? 'text-lime-400' : 'text-white'}`}
-                            >
-                                Shield
-                            </Link>
+                            <button onClick={onClose} className="p-2 text-white hover:text-lime-400 transition-colors relative z-50">
+                                <X className="w-8 h-8" />
+                            </button>
                         </div>
 
-                        <Link
-                            href={getPath('/faq')}
-                            onClick={onClose}
-                            className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/faq') ? 'text-lime-400' : 'text-white'}`}
-                        >
-                            {t.faq || "FAQ"}
-                        </Link>
-                        <Link
-                            href={getPath('/contact')}
-                            onClick={onClose}
-                            className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/contact') ? 'text-lime-400' : 'text-white'}`}
-                        >
-                            {t.contact || "CONTACT"}
-                        </Link>
-                    </nav>
+                        {/* Links */}
+                        <nav className="flex-1 flex flex-col justify-start pt-8 px-8 gap-6 pb-8">
+                            <Link
+                                href={getPath('/')}
+                                onClick={onClose}
+                                className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/') ? 'text-lime-400' : 'text-white'}`}
+                            >
+                                {t?.home || "HOME"}
+                            </Link>
+                            <Link
+                                href={getPath('/about')}
+                                onClick={onClose}
+                                className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/about') ? 'text-lime-400' : 'text-white'}`}
+                            >
+                                {t?.about || "ABOUT"}
+                            </Link>
 
-                    {/* Footer of Menu */}
-                    <div className="p-8 border-t border-white/10 flex flex-col gap-6 shrink-0 bg-[#011410]">
-                        <div className="flex items-center gap-6 text-sm font-bold tracking-widest uppercase">
-                            <Link href="/en" onClick={onClose} className={!isNL ? 'text-lime-400' : 'text-white/50'}>EN</Link>
-                            <span className="text-white/20">|</span>
-                            <Link href="/nl" onClick={onClose} className={isNL ? 'text-lime-400' : 'text-white/50'}>NL</Link>
+                            <div className="flex flex-col gap-3 py-2 border-l-2 border-white/5 pl-6">
+                                <span className="text-emerald-100/30 text-[10px] font-bold uppercase tracking-[0.4em] mb-2">{t?.products || "PRODUCTS"}</span>
+                                <Link
+                                    href={getPath('/products/all12')}
+                                    onClick={onClose}
+                                    className={`text-xl font-bold tracking-widest uppercase transition-colors ${isActive('/products/all12') ? 'text-lime-400' : 'text-white'}`}
+                                >
+                                    All12
+                                </Link>
+                                <Link
+                                    href={getPath('/products/shield')}
+                                    onClick={onClose}
+                                    className={`text-xl font-bold tracking-widest uppercase transition-colors ${isActive('/products/shield') ? 'text-lime-400' : 'text-white'}`}
+                                >
+                                    Shield
+                                </Link>
+                            </div>
+
+                            <Link
+                                href={getPath('/faq')}
+                                onClick={onClose}
+                                className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/faq') ? 'text-lime-400' : 'text-white'}`}
+                            >
+                                {t?.faq || "FAQ"}
+                            </Link>
+                            <Link
+                                href={getPath('/contact')}
+                                onClick={onClose}
+                                className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/contact') ? 'text-lime-400' : 'text-white'}`}
+                            >
+                                {t?.contact || "CONTACT"}
+                            </Link>
+                        </nav>
+
+                        {/* Footer of Menu */}
+                        <div className="p-8 border-t border-white/10 flex flex-col gap-6 bg-[#011410]">
+                            <div className="flex items-center gap-6 text-sm font-bold tracking-widest uppercase">
+                                <Link href="/en" onClick={onClose} className={!isNL ? 'text-lime-400' : 'text-white/50'}>EN</Link>
+                                <span className="text-white/20">|</span>
+                                <Link href="/nl" onClick={onClose} className={isNL ? 'text-lime-400' : 'text-white/50'}>NL</Link>
+                            </div>
+
+                            <button
+                                onClick={onOpenSample}
+                                className="w-full bg-lime-500 text-emerald-950 font-bold py-4 px-5 rounded-2xl transition-all text-xs uppercase tracking-[0.2em] shadow-lg shadow-lime-500/10"
+                            >
+                                {t?.cta || "SAMPLE AANVRAGEN"}
+                            </button>
                         </div>
-
-                        <button
-                            onClick={onOpenSample}
-                            className="w-full bg-lime-500 text-emerald-950 font-bold py-4 px-5 rounded-2xl transition-all text-xs uppercase tracking-[0.2em] shadow-lg shadow-lime-500/10"
-                        >
-                            {t.cta}
-                        </button>
                     </div>
                 </div>
             )}
