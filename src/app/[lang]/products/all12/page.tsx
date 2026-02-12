@@ -292,7 +292,7 @@ export default async function ProductAll12({
                                     <div className="space-y-10">
                                         {content.steps.map((item, i) => (
                                             <div key={i} className="flex gap-6 group">
-                                                <div className="text-4xl font-black text-lime-500/20 group-hover:text-lime-400 transition-colors font-outfit">0{i + 1}</div>
+                                                <div className="text-4xl font-black text-lime-500 font-outfit">0{i + 1}</div>
                                                 <div>
                                                     <h4 className="text-xl font-bold text-white mb-2">{item.title}</h4>
                                                     <p className="text-emerald-100/50 leading-relaxed font-medium">{item.desc}</p>

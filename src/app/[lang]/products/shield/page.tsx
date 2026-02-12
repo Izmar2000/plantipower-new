@@ -271,7 +271,7 @@ export default async function ProductShield({
                                 <div className="space-y-10">
                                     {content.steps.map((item, i) => (
                                         <div key={i} className="group relative pl-16">
-                                            <div className="absolute left-0 top-0 text-3xl font-black text-white/10 group-hover:text-cyan-400 transition-colors font-outfit">{item.step}</div>
+                                            <div className="absolute left-0 top-0 text-3xl font-black text-cyan-400 font-outfit">{item.step}</div>
                                             <h4 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{item.title}</h4>
                                             <p className="text-slate-400 leading-relaxed font-medium">{item.desc}</p>
                                         </div>
