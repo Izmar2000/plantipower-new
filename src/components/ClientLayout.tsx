@@ -44,14 +44,14 @@ export default function ClientLayout({
                     onOpenSample={() => setIsSampleModalOpen(true)}
                     onOpenMenu={() => setIsMobileMenuOpen(true)}
                 />
-                <MobileMenu
-                    open={isMobileMenuOpen}
-                    dict={dict}
-                    lang={lang}
-                    onClose={() => setIsMobileMenuOpen(false)}
-                    onOpenSample={() => setIsSampleModalOpen(true)}
-                />
             </div>
+            <MobileMenu
+                open={isMobileMenuOpen}
+                dict={dict}
+                lang={lang}
+                onClose={() => setIsMobileMenuOpen(false)}
+                onOpenSample={() => setIsSampleModalOpen(true)}
+            />
 
             <div className="min-h-screen flex flex-col">
                 <div className="site-scale-container flex-grow flex flex-col">

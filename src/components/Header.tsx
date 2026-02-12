@@ -97,7 +97,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenSample, onOpenMenu, dict, lang })
             </Link>
           </div>
 
-          <div className="relative z-10 flex items-center gap-6">
+          <div className="relative z-10 flex items-center gap-3 md:gap-6">
             {/* Language Switcher - Use standard Next.js Link without localized logic as Middleware handles it?
                             No, switch lang needs to replace first segment.
                             Ik maak simpele links naar /en en /nl.
@@ -118,7 +118,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenSample, onOpenMenu, dict, lang })
             {/* Mobile Menu Toggle */}
             <button
               onClick={onOpenMenu}
-              className="md:hidden p-2 -mr-2 text-white hover:text-lime-400 transition-colors"
+              className="relative z-50 md:hidden p-2 -mr-2 text-white hover:text-lime-400 transition-colors"
             >
               <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
