@@ -63,7 +63,7 @@ const InteractivePlantHero = () => {
 
             {/* Background Image (Clean Base) */}
             <motion.div
-                className="relative w-full max-w-[900px] aspect-[4/5]"
+                className="relative w-full max-w-[1000px] aspect-[4/5]"
                 style={{
                     scale,
                     opacity

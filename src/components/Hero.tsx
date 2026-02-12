@@ -75,8 +75,8 @@ const Hero: React.FC<HeroProps> = ({ dict, lang }) => {
           </div>
 
           {/* Right Column: Hero Visual */}
-          <div className="relative z-0 flex justify-center items-center lg:justify-end lg:pl-10 pb-12 lg:pb-0 -mt-10 lg:-mt-32">
-            <div className="relative w-full max-w-[850px] lg:-mr-20">
+          <div className={`relative z-0 flex justify-center items-center lg:justify-end pb-12 lg:pb-0 -mt-10 ${lang === 'en' ? 'lg:-mt-20' : 'lg:-mt-32'}`}>
+            <div className={`relative w-full max-w-[950px] transition-all duration-500 ${lang === 'en' ? 'lg:-mr-10' : 'lg:-mr-5'}`}>
               <InteractivePlantHero />
             </div>
           </div>
