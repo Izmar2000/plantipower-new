@@ -17,7 +17,7 @@ const InteractivePlantHero = () => {
         offset: ["start start", "end start"]
     });
 
-    if (!isMounted) return <div className="min-h-[600px]" />; // Placeholder to avoid layout shift
+    if (!isMounted) return <div ref={containerRef} className="min-h-[600px] w-full flex items-center justify-center -mt-10 lg:-mt-20 pointer-events-none opacity-0" />; // Placeholder with ref to satisfy useScroll
 
     const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
     const scale = useTransform(smoothProgress, [0, 1], [1, 1.05]);
