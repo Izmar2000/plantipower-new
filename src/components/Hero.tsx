@@ -25,10 +25,10 @@ const Hero: React.FC<HeroProps> = ({ dict, lang }) => {
 
           {/* Left Column: Text Content */}
           <div className="relative z-10 flex flex-col justify-center text-center lg:text-left pt-4 lg:pt-0 lg:-mt-14">
-            <h1 className="font-outfit font-bold uppercase text-5xl md:text-7xl tracking-[0.04em] leading-[1.02] text-left mb-8 md:mb-10">
-              <span className="text-emerald-400 block whitespace-nowrap">{t.titleLine1}</span>
-              <span className="text-white block whitespace-nowrap">{t.titleLine2}</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-emerald-400 whitespace-nowrap block">
+            <h1 className="font-outfit font-bold uppercase text-4xl sm:text-5xl md:text-7xl tracking-[0.04em] leading-[1.02] text-left mb-8 md:mb-10">
+              <span className="text-emerald-400 block whitespace-normal sm:whitespace-nowrap">{t.titleLine1}</span>
+              <span className="text-white block whitespace-normal sm:whitespace-nowrap">{t.titleLine2}</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-emerald-400 whitespace-normal sm:whitespace-nowrap block">
                 {t.titleLine3}
               </span>
             </h1>
