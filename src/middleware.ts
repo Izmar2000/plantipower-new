@@ -7,7 +7,8 @@ import Negotiator from 'negotiator'
 function getLocale(request: NextRequest): string | undefined {
     const negotiatorHeaders: Record<string, string> = {}
     request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
-    const locales: string[] = i18n.locales
+    // Create a mutable copy of locales for Negotiator and matchLocale
+    const locales: string[] = [...i18n.locales]
     let languages = new Negotiator({ headers: negotiatorHeaders }).languages(locales)
     const locale = matchLocale(languages, locales, i18n.defaultLocale)
     return locale
