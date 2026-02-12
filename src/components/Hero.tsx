@@ -34,12 +34,18 @@ const Hero: React.FC<HeroProps> = ({ dict, lang }) => {
             </h1>
 
             {/* USPs Line */}
-            <div className="flex items-center justify-start gap-4 mb-4">
-              <div className="flex items-center gap-3 py-2">
-                <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.35em] text-white/90 whitespace-nowrap">
-                  {t.uspsPart1} <span className="text-lime-500 mx-2">|</span> {t.uspsPart2} <span className="text-lime-500 mx-2">|</span> {t.uspsPart3}
-                </span>
-              </div>
+            <div className="flex flex-wrap items-center justify-start gap-y-2 gap-x-4 mb-6">
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-lime-400 whitespace-nowrap">
+                {t.uspsPart1}
+              </span>
+              <span className="text-white/20 hidden sm:block">|</span>
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-white/90 whitespace-nowrap">
+                {t.uspsPart2}
+              </span>
+              <span className="text-white/20 hidden sm:block">|</span>
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-white/90 whitespace-nowrap">
+                {t.uspsPart3}
+              </span>
             </div>
 
             {/* Styled Description Paragraph */}
