@@ -30,17 +30,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
     };
 
     return (
-        <AnimatePresence>
+        <>
             {open && (
-                <motion.div
-                    initial={{ opacity: 0, x: '100%' }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: '100%' }}
-                    transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                    className="fixed inset-0 z-[99999] bg-[#011410] flex flex-col"
+                <div
+                    className="fixed inset-0 z-[9999999] bg-[#011410] flex flex-col"
                 >
                     {/* Header in Menu */}
-                    <div className="flex justify-between items-center px-6 py-6 border-b border-white/10 shrink-0">
+                    <div className="flex justify-between items-center px-6 py-4 border-b border-white/10 shrink-0">
                         <Link href={`/${lang}`} onClick={onClose} className="h-12 relative z-50">
                             <img
                                 src="https://irp.cdn-website.com/480e14da/dms3rep/multi/Planti-Power-Logo-.png"
@@ -54,7 +50,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                     </div>
 
                     {/* Links */}
-                    <nav className="flex-grow flex flex-col justify-start pt-10 px-8 gap-6 overflow-y-auto custom-scrollbar">
+                    <nav className="flex-grow flex flex-col justify-start pt-8 px-8 gap-6 overflow-y-auto custom-scrollbar">
                         <Link
                             href={getPath('/')}
                             onClick={onClose}
@@ -105,7 +101,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                     </nav>
 
                     {/* Footer of Menu */}
-                    <div className="p-8 border-t border-white/10 flex flex-col gap-6">
+                    <div className="p-8 border-t border-white/10 flex flex-col gap-6 shrink-0 bg-[#011410]">
                         <div className="flex items-center gap-6 text-sm font-bold tracking-widest uppercase">
                             <Link href="/en" onClick={onClose} className={!isNL ? 'text-lime-400' : 'text-white/50'}>EN</Link>
                             <span className="text-white/20">|</span>
@@ -114,14 +110,14 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
 
                         <button
                             onClick={onOpenSample}
-                            className="w-full bg-lime-500 text-emerald-950 font-bold py-4 px-5 rounded-2xl transition-all text-xs uppercase tracking-[0.2em]"
+                            className="w-full bg-lime-500 text-emerald-950 font-bold py-4 px-5 rounded-2xl transition-all text-xs uppercase tracking-[0.2em] shadow-lg shadow-lime-500/10"
                         >
                             {t.cta}
                         </button>
                     </div>
-                </motion.div>
+                </div>
             )}
-        </AnimatePresence>
+        </>
     );
 };
 
