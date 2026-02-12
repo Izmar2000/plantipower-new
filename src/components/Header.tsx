@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { getLocalizedPath, getPath } from '../utils/navigation';
 
 interface HeaderProps {
   onOpenSample: () => void;
@@ -41,14 +42,14 @@ const Header: React.FC<HeaderProps> = ({ onOpenSample, onOpenMenu, dict, lang })
           </Link>
 
           <div className="hidden md:flex items-center gap-8 lg:gap-10 text-[12px] font-bold uppercase tracking-[0.4em] text-white relative z-10">
-            <Link href={`/${lang}`} className={`hover:text-lime-400 transition-all relative group ${isActive(`/${lang}`) && pathname === `/${lang}` ? 'text-lime-400' : ''}`}>
+            <Link href={`/${lang}`} className={`hover:text-lime-400 transition-all relative group ${pathname === `/${lang}` ? 'text-lime-400' : ''}`}>
               {t.home}
-              <span className={`absolute -bottom-1 left-0 h-px bg-lime-500 transition-all duration-300 ${isActive(`/${lang}`) && pathname === `/${lang}` ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+              <span className={`absolute -bottom-1 left-0 h-px bg-lime-500 transition-all duration-300 ${pathname === `/${lang}` ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </Link>
 
-            <Link href={`/${lang}/about`} className={`hover:text-lime-400 transition-all relative group ${isActive(`/${lang}/about`) ? 'text-lime-400' : ''}`}>
+            <Link href={getPath('about', lang)} className={`hover:text-lime-400 transition-all relative group ${isActive(getPath('about', lang)) ? 'text-lime-400' : ''}`}>
               {t.about}
-              <span className={`absolute -bottom-1 left-0 h-px bg-lime-500 transition-all duration-300 ${isActive(`/${lang}/about`) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+              <span className={`absolute -bottom-1 left-0 h-px bg-lime-500 transition-all duration-300 ${isActive(getPath('about', lang)) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </Link>
 
             {/* Products Dropdown */}
@@ -73,27 +74,27 @@ const Header: React.FC<HeaderProps> = ({ onOpenSample, onOpenMenu, dict, lang })
                                         In dicts kan ik paths zetten of hardcoden.
                                         Ik kies voor /products/all12 mapnaam. Dus href is /[lang]/products/all12.
                                     */}
-                  <Link href={`/${lang}/products/all12`} className={`flex flex-col px-5 py-4 rounded-xl hover:bg-white/5 transition-colors group/item ${isActive(`/${lang}/products/all12`) ? 'bg-white/5' : ''}`}>
-                    <span className={`transition-colors tracking-[0.2em] font-bold ${isActive(`/${lang}/products/all12`) ? 'text-lime-400' : 'text-white group-hover/item:text-lime-400'}`}>{t.all12}</span>
+                  <Link href={getPath('products/all12', lang)} className={`flex flex-col px-5 py-4 rounded-xl hover:bg-white/5 transition-colors group/item ${isActive(getPath('products/all12', lang)) ? 'bg-white/5' : ''}`}>
+                    <span className={`transition-colors tracking-[0.2em] font-bold ${isActive(getPath('products/all12', lang)) ? 'text-lime-400' : 'text-white group-hover/item:text-lime-400'}`}>{t.all12}</span>
                     <span className="text-[10px] tracking-widest text-emerald-100/40 mt-1 uppercase font-medium">{t.all12Desc}</span>
                   </Link>
                   <div className="h-px bg-white/5 mx-2 my-1"></div>
-                  <Link href={`/${lang}/products/shield`} className={`flex flex-col px-5 py-4 rounded-xl hover:bg-white/5 transition-colors group/item ${isActive(`/${lang}/products/shield`) ? 'bg-white/5' : ''}`}>
-                    <span className={`transition-colors tracking-[0.2em] font-bold ${isActive(`/${lang}/products/shield`) ? 'text-lime-400' : 'text-white group-hover/item:text-lime-400'}`}>{t.shield}</span>
+                  <Link href={getPath('products/shield', lang)} className={`flex flex-col px-5 py-4 rounded-xl hover:bg-white/5 transition-colors group/item ${isActive(getPath('products/shield', lang)) ? 'bg-white/5' : ''}`}>
+                    <span className={`transition-colors tracking-[0.2em] font-bold ${isActive(getPath('products/shield', lang)) ? 'text-lime-400' : 'text-white group-hover/item:text-lime-400'}`}>{t.shield}</span>
                     <span className="text-[10px] tracking-widest text-emerald-100/40 mt-1 uppercase font-medium">{t.shieldDesc}</span>
                   </Link>
                 </div>
               </div>
             </div>
 
-            <Link href={`/${lang}/faq`} className={`hover:text-lime-400 transition-all relative group ${isActive(`/${lang}/faq`) ? 'text-lime-400' : ''}`}>
+            <Link href={getPath('faq', lang)} className={`hover:text-lime-400 transition-all relative group ${isActive(getPath('faq', lang)) ? 'text-lime-400' : ''}`}>
               {t.faq}
-              <span className={`absolute -bottom-1 left-0 h-px bg-lime-500 transition-all duration-300 ${isActive(`/${lang}/faq`) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+              <span className={`absolute -bottom-1 left-0 h-px bg-lime-500 transition-all duration-300 ${isActive(getPath('faq', lang)) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </Link>
 
-            <Link href={`/${lang}/contact`} className={`hover:text-lime-400 transition-all relative group ${isActive(`/${lang}/contact`) ? 'text-lime-400' : ''}`}>
+            <Link href={getPath('contact', lang)} className={`hover:text-lime-400 transition-all relative group ${isActive(getPath('contact', lang)) ? 'text-lime-400' : ''}`}>
               {t.contact}
-              <span className={`absolute -bottom-1 left-0 h-px bg-lime-500 transition-all duration-300 ${isActive(`/${lang}/contact`) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+              <span className={`absolute -bottom-1 left-0 h-px bg-lime-500 transition-all duration-300 ${isActive(getPath('contact', lang)) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </Link>
           </div>
 
@@ -102,10 +103,10 @@ const Header: React.FC<HeaderProps> = ({ onOpenSample, onOpenMenu, dict, lang })
                             No, switch lang needs to replace first segment.
                             Ik maak simpele links naar /en en /nl.
                          */}
-            <div className="hidden md:flex items-center gap-3 text-xs font-bold uppercase tracking-widest">
-              <Link href={pathname.replace(/^\/nl/, '/en').replace(/^\/en/, '/en') || '/en'} className={`hover:text-lime-400 transition-colors ${lang === 'en' ? 'text-lime-400' : 'text-white/50'}`}>EN</Link>
-              <span className="text-white/20">|</span>
-              <Link href={pathname.replace(/^\/en/, '/nl').replace(/^\/nl/, '/nl') || '/nl'} className={`hover:text-lime-400 transition-colors ${lang === 'nl' ? 'text-lime-400' : 'text-white/50'}`}>NL</Link>
+            <div className="hidden md:flex items-center gap-3 text-[11px] font-bold uppercase tracking-widest">
+              <Link href={getLocalizedPath(pathname, 'en')} className={`hover:text-lime-400 transition-colors ${lang === 'en' ? 'text-lime-400 underline underline-offset-4 decoration-lime-500/50' : 'text-white/40'}`}>EN</Link>
+              <span className="text-white/10">|</span>
+              <Link href={getLocalizedPath(pathname, 'nl')} className={`hover:text-lime-400 transition-colors ${lang === 'nl' ? 'text-lime-400 underline underline-offset-4 decoration-lime-500/50' : 'text-white/40'}`}>NL</Link>
             </div>
 
             <button

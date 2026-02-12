@@ -114,22 +114,28 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
 
       <div className="relative w-full max-w-4xl bg-[#011410] md:rounded-[30px] rounded-t-[30px] shadow-2xl flex flex-col max-h-[90vh] md:max-h-[95vh] border border-[#0d2b24] mt-auto md:mt-0">
 
-        {/* Close Button */}
+        {/* Always Visible Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-[100] w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/10 transition-all active:scale-90"
+          className="absolute top-4 right-4 z-[110] w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-xl border border-white/20 shadow-2xl transition-all active:scale-90"
           aria-label="Close"
         >
-          <X className="w-6 h-6" />
+          <X className="w-7 h-7" />
         </button>
 
         {isSuccess ? (
-          <div className="p-20 text-center flex flex-col items-center justify-center h-full">
-            <div className="w-16 h-16 bg-lime-500 rounded-full flex items-center justify-center mb-6">
-              <Check className="w-8 h-8 text-[#011410]" />
+          <div className="p-10 md:p-20 text-center flex flex-col items-center justify-center h-full min-h-[400px]">
+            <div className="w-20 h-20 bg-lime-500 rounded-full flex items-center justify-center mb-8 shadow-lg shadow-lime-500/20">
+              <Check className="w-10 h-10 text-[#011410]" />
             </div>
-            <h2 className="text-3xl font-bold text-white mb-4">{content.thankYou}</h2>
-            <p className="text-white/70">{content.successMsg}</p>
+            <h2 className="text-4xl font-bold text-white mb-6 uppercase tracking-tighter">{content.thankYou}</h2>
+            <p className="text-xl text-emerald-100/70 max-w-md mx-auto leading-relaxed">{content.successMsg}</p>
+            <button
+              onClick={onClose}
+              className="mt-12 text-lime-500 font-bold uppercase tracking-widest text-xs hover:text-white transition-colors"
+            >
+              Sluiten
+            </button>
           </div>
         ) : (
           <div className="overflow-y-auto custom-scrollbar pt-16 md:pt-10 pb-8 px-6 md:px-10">

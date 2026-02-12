@@ -7,7 +7,9 @@ import MobileMenu from './MobileMenu'
 import SampleModal from './SampleModal'
 import Footer from './Footer'
 
-export default function ClientLayout({
+import { ModalProvider, useModals } from '../context/ModalContext'
+
+function LayoutContent({
     children,
     dict,
     lang,
@@ -16,7 +18,7 @@ export default function ClientLayout({
     dict: any
     lang: string
 }) {
-    const [isSampleModalOpen, setIsSampleModalOpen] = useState(false)
+    const { isSampleModalOpen, openSampleModal, closeSampleModal } = useModals()
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const pathname = usePathname()
 
@@ -41,7 +43,7 @@ export default function ClientLayout({
                 <Header
                     dict={dict}
                     lang={lang}
-                    onOpenSample={() => setIsSampleModalOpen(true)}
+                    onOpenSample={openSampleModal}
                     onOpenMenu={() => setIsMobileMenuOpen(true)}
                 />
             </div>
@@ -50,7 +52,7 @@ export default function ClientLayout({
                 dict={dict}
                 lang={lang}
                 onClose={() => setIsMobileMenuOpen(false)}
-                onOpenSample={() => setIsSampleModalOpen(true)}
+                onOpenSample={openSampleModal}
             />
 
             <div className="min-h-screen flex flex-col">
@@ -60,9 +62,21 @@ export default function ClientLayout({
                 </div>
                 <SampleModal
                     isOpen={isSampleModalOpen}
-                    onClose={() => setIsSampleModalOpen(false)}
+                    onClose={closeSampleModal}
                 />
             </div>
         </>
+    )
+}
+
+export default function ClientLayout(props: {
+    children: React.ReactNode
+    dict: any
+    lang: string
+}) {
+    return (
+        <ModalProvider>
+            <LayoutContent {...props} />
+        </ModalProvider>
     )
 }

@@ -48,7 +48,7 @@ export default async function ProductAll12({
     const content = {
         title: isNL ? 'PlantiPower All12 | Professionele Nutriënt Transport' : 'PlantiPower All12 | Professional Nutrient Transport',
         meta: isNL ? 'Ontdek PlantiPower All12 - de ultieme nutriënt transport technologie.' : 'Discover PlantiPower All12 - the ultimate nutrient transport technology.',
-        heroBadge: 'Biological Innovation',
+        heroBadge: isNL ? 'Biologische Innovatie' : 'Biological Innovation',
         heroTitle: <>ALL12<span className="text-lime-500">®</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600">TRANSPORT TECH.</span></>,
         heroDesc: isNL
             ? 'Doorbraak in passief transport. Waar fulvinezuren normaal stoppen bij 3 nutriënten, transporteert de ALL12® technologie het volledige spectrum.'
@@ -86,7 +86,7 @@ export default async function ProductAll12({
         advantageBadge: 'The All12 Advantage',
         advantageTitle: isNL ? <>Revolutionair <br /><span className="text-lime-500">transport.</span></> : <>Revolutionary <br /><span className="text-lime-500">transport.</span></>,
         advantageDesc: isNL
-            ? 'PlantiPower All12 is niet zomaar een toevoeging; het is de motor achter uw voedingsschema. Door gebruik te maken van nano-transport technologie worden blokkades in de bodem opgeheven en bereiken voedingsstoffen de plant sneller dan ooit tevoren.'
+            ? 'PlantiPower All12 is niet zomaar een toevoeging; het is de motor achter je voedingsschema. Door gebruik te maken van nano-transport technologie worden blokkades in de bodem opgeheven en bereiken voedingsstoffen de plant sneller dan ooit tevoren.'
             : 'PlantiPower All12 is not just an additive; it is the engine behind your nutrition schedule. By using nano-transport technology, soil blockages are removed and nutrients reach the plant faster than ever before.',
         usps: isNL
             ? ["Maximale opname van alle 12 elementen", "Conditioneert en revitaliseert het substraat", "Verlaagt de EC-druk in de wortelzone", "Volledig biologisch en residu-vrij"]
@@ -102,13 +102,13 @@ export default async function ProductAll12({
         steps: [
             { step: "01", title: isNL ? "Goed schudden" : "Shake well", desc: isNL ? "Zorg voor een homogene menging door de jerrycan voor gebruik krachtig te schudden." : "Ensure homogeneous mixing by shaking the jerrycan vigorously before use." },
             { step: "02", title: isNL ? "Optimale dosering" : "Optimal dosage", desc: isNL ? "Gebruik 5 ml PlantiPower All12 per 1 liter voedingswater voor een maximaal effect." : "Use 5 ml PlantiPower All12 per 1 liter of nutrient water for maximum effect." },
-            { step: "03", title: isNL ? "Maandelijkse boost" : "Monthly boost", desc: isNL ? "Pas het product éénmaal per maand toe als onderdeel van uw reguliere bewateringsschema." : "Apply the product once a month as part of your regular watering schedule." }
+            { step: "03", title: isNL ? "Maandelijkse boost" : "Monthly boost", desc: isNL ? "Pas het product éénmaal per maand toe als onderdeel van je reguliere bewateringsschema." : "Apply the product once a month as part of your regular watering schedule." }
         ],
         expertAdvice: isNL ? 'Expert Advies' : 'Expert Advice',
         expertItems: [
-            { label: 'Synergie', text: isNL ? 'All12 werkt optimaal samen met zowel minerale als organische voeding.' : 'All12 works optimally with both mineral and organic nutrition.' },
+            { label: isNL ? 'Synergie' : 'Synergy', text: isNL ? 'All12 werkt optimaal samen met zowel minerale als organische voeding.' : 'All12 works optimally with both mineral and organic nutrition.' },
             { label: 'EC-Check', text: isNL ? 'All12 verhoogt de opname, wat kan leiden tot een lagere benodigde basis-voedingsgift.' : 'All12 increases uptake, which can lead to a lower required base nutrient dose.' },
-            { label: isNL ? 'Bewaadvies' : 'Storage', text: isNL ? 'Bewaar op een koele plaats buiten direct zonlicht voor behoud van de nano-tubes.' : 'Store in a cool place out of direct sunlight to preserve the nano-tubes.' }
+            { label: isNL ? 'Bewaaradvies' : 'Storage', text: isNL ? 'Bewaar op een koele plaats buiten direct zonlicht voor behoud van de nano-tubes.' : 'Store in a cool place out of direct sunlight to preserve the nano-tubes.' }
         ],
         disclaimer: isNL
             ? "PlantiPower All12 is geclassificeerd als niet-gevaarlijk en is 100% veilig bij correct gebruik in professionele kassen en landbouwomgevingen."

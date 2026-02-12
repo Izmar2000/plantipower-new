@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { getPath } from '../utils/navigation';
 
 interface FooterProps {
   dict: any;
@@ -18,8 +19,6 @@ const Footer: React.FC<FooterProps> = ({ dict, lang }) => {
   if (!isMounted) return null;
 
   const t = dict.Footer;
-
-  const getPath = (path: string) => `/${lang}${path === '/' ? '' : path}`;
 
   return (
     <footer className="relative pt-32 pb-12 bg-gradient-to-b from-[#011410] to-[#000d0a] overflow-hidden">
@@ -47,14 +46,14 @@ const Footer: React.FC<FooterProps> = ({ dict, lang }) => {
               <div className="text-[10px] font-black uppercase tracking-[0.4rem] text-lime-400">PlantiPower</div>
               <ul className="space-y-3">
                 {[
-                  { name: t.links.home, path: "/" },
-                  { name: t.links.about, path: "/about" },
-                  { name: t.links.products, path: "/products/all12" }, // Default to ALL12 for now
-                  { name: t.links.faq, path: "/faq" },
-                  { name: t.links.contact, path: "/contact" }
+                  { name: t.links.home, key: "/" },
+                  { name: t.links.about, key: "about" },
+                  { name: t.links.products, key: "products/all12" },
+                  { name: t.links.faq, key: "faq" },
+                  { name: t.links.contact, key: "contact" }
                 ].map((item) => (
                   <li key={item.name}>
-                    <Link href={getPath(item.path)} className="text-emerald-50 hover:text-lime-400 transition-colors flex items-center gap-2 group">
+                    <Link href={item.key === '/' ? `/${lang}` : getPath(item.key, lang)} className="text-emerald-50 hover:text-lime-400 transition-colors flex items-center gap-2 group">
                       <span className="w-1.5 h-1.5 rounded-full bg-lime-500 shadow-[0_0_8px_rgba(132,204,22,0.6)]"></span>
                       {item.name}
                     </Link>

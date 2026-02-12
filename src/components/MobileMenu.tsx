@@ -1,10 +1,11 @@
 'use client'
 
-import React from 'react';
+import { FC } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Info, ShoppingBag, MessageSquare, HelpCircle, ChevronRight, Globe } from 'lucide-react';
+import { X, ChevronRight, HelpCircle, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
+import { getLocalizedPath, getPath } from '../utils/navigation';
 
 interface MobileMenuProps {
     open: boolean;
@@ -14,17 +15,15 @@ interface MobileMenuProps {
     lang: string;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, dict, lang }) => {
+const MobileMenu: FC<MobileMenuProps> = ({ open, onClose, onOpenSample, dict, lang }) => {
     const pathname = usePathname();
     const t = dict?.Header;
     const isNL = lang === 'nl';
 
-    const getPath = (basePath: string) => `/${lang}${basePath === '/' ? '' : basePath}`;
-
-    const isActive = (path: string) => {
-        const fullPath = getPath(path);
-        if (path === '/') return pathname === fullPath;
-        return pathname.startsWith(fullPath);
+    const isActive = (pathKey: string) => {
+        if (pathKey === '/') return pathname === `/${lang}`;
+        const targetPath = getPath(pathKey, lang);
+        return pathname.startsWith(targetPath);
     };
 
     if (!open) return null;
@@ -33,7 +32,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
         <div
             className="fixed inset-0 z-[2000000] bg-[#01140f] flex flex-col pointer-events-auto overflow-hidden animate-fade-in"
             style={{
-                height: '100dvh', // Modern dynamic viewport height
+                height: '100dvh',
                 WebkitTapHighlightColor: 'transparent'
             }}
         >
@@ -66,9 +65,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                         {t?.home || "Home"}
                     </Link>
                     <Link
-                        href={getPath('/about')}
+                        href={getPath('about', lang)}
                         onClick={onClose}
-                        className={`text-3xl font-black uppercase tracking-tighter py-2 transition-colors ${isActive('/about') ? 'text-lime-400' : 'text-white'}`}
+                        className={`text-3xl font-black uppercase tracking-tighter py-2 transition-colors ${isActive('about') ? 'text-lime-400' : 'text-white'}`}
                     >
                         {t?.about || "Over ons"}
                     </Link>
@@ -78,17 +77,17 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                 <div className="flex flex-col gap-4">
                     <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.4em] mb-2">Producten</div>
                     <Link
-                        href={getPath('/products/all12')}
+                        href={getPath('products/all12', lang)}
                         onClick={onClose}
-                        className={`flex items-center justify-between p-5 rounded-xl border ${isActive('/products/all12') ? 'bg-lime-500/10 border-lime-500/30 text-lime-400' : 'bg-white/5 border-white/5 text-white active:bg-white/10'}`}
+                        className={`flex items-center justify-between p-5 rounded-xl border ${isActive('products/all12') ? 'bg-lime-500/10 border-lime-500/30 text-lime-400' : 'bg-white/5 border-white/5 text-white active:bg-white/10'}`}
                     >
                         <span className="text-xl font-bold uppercase tracking-widest">{t?.all12 || "PlantiPower All12"}</span>
                         <ChevronRight className="w-5 h-5 opacity-30" />
                     </Link>
                     <Link
-                        href={getPath('/products/shield')}
+                        href={getPath('products/shield', lang)}
                         onClick={onClose}
-                        className={`flex items-center justify-between p-5 rounded-xl border ${isActive('/products/shield') ? 'bg-blue-900/20 border-blue-500/30 text-blue-400' : 'bg-white/5 border-white/5 text-white active:bg-white/10'}`}
+                        className={`flex items-center justify-between p-5 rounded-xl border ${isActive('products/shield') ? 'bg-blue-900/20 border-blue-500/30 text-blue-400' : 'bg-white/5 border-white/5 text-white active:bg-white/10'}`}
                     >
                         <span className="text-xl font-bold uppercase tracking-widest">{t?.shield || "PlantiPower Shield"}</span>
                         <ChevronRight className="w-5 h-5 opacity-30" />
@@ -98,7 +97,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                 {/* Practical Links */}
                 <div className="grid grid-cols-2 gap-4">
                     <Link
-                        href={getPath('/faq')}
+                        href={getPath('faq', lang)}
                         onClick={onClose}
                         className="flex flex-col gap-2 p-5 rounded-xl bg-white/5 border border-white/5 text-white active:bg-white/10"
                     >
@@ -106,7 +105,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                         <span className="text-[12px] font-black uppercase tracking-widest">{t?.faq || "FAQ"}</span>
                     </Link>
                     <Link
-                        href={getPath('/contact')}
+                        href={getPath('contact', lang)}
                         onClick={onClose}
                         className="flex flex-col gap-2 p-5 rounded-xl bg-white/5 border border-white/5 text-white active:bg-white/10"
                     >
@@ -120,9 +119,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                     <div className="flex items-center justify-between">
                         <span className="text-white/30 text-[10px] font-black uppercase tracking-widest">Language</span>
                         <div className="flex gap-4">
-                            <Link href="/en" onClick={onClose} className={`text-sm font-bold ${!isNL ? 'text-lime-400' : 'text-white/40 hover:text-white'}`}>EN</Link>
+                            <Link href={getLocalizedPath(pathname, 'en')} onClick={onClose} className={`text-sm font-bold ${!isNL ? 'text-lime-400 underline underline-offset-4 decoration-lime-500/50' : 'text-white/40 hover:text-white'}`}>EN</Link>
                             <span className="text-white/10">|</span>
-                            <Link href="/nl" onClick={onClose} className={`text-sm font-bold ${isNL ? 'text-lime-400' : 'text-white/40 hover:text-white'}`}>NL</Link>
+                            <Link href={getLocalizedPath(pathname, 'nl')} onClick={onClose} className={`text-sm font-bold ${isNL ? 'text-lime-400 underline underline-offset-4 decoration-lime-500/50' : 'text-white/40 hover:text-white'}`}>NL</Link>
                         </div>
                     </div>
                     <button

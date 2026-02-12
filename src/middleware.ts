@@ -22,14 +22,19 @@ export function middleware(request: NextRequest) {
         return
     }
 
+    if (pathname.startsWith('/en/') || pathname === '/en') {
+        const newPath = pathname.replace(/^\/en/, '') || '/'
+        return NextResponse.redirect(new URL(newPath, request.url))
+    }
+
     const pathnameIsMissingLocale = i18n.locales.every(
         (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
     )
 
     if (pathnameIsMissingLocale) {
-        const locale = getLocale(request)
-        return NextResponse.redirect(
-            new URL(`/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`, request.url)
+        // Rewrite internally to /en/... so [lang] captures it as English
+        return NextResponse.rewrite(
+            new URL(`/en${pathname.startsWith('/') ? '' : '/'}${pathname}`, request.url)
         )
     }
 }

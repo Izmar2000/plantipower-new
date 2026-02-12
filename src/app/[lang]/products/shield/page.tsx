@@ -48,7 +48,7 @@ export default async function ProductShield({
         meta: isNL
             ? 'Verhoog de natuurlijke weerbaarheid van je gewas met PlantiPower Shield. Een geavanceerde barrière voor vitalere planten zonder residu.'
             : 'Increase the natural resilience of your crop with PlantiPower Shield. An advanced barrier for more vital plants without residue.',
-        heroBadge: 'Premium Protection System',
+        heroBadge: isNL ? 'Premium Beschermingssysteem' : 'Premium Protection System',
         heroTitle: <>SHIELD<span className="text-cyan-400">®</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">INVISIBLE FORCE.</span></>,
         heroDesc: isNL
             ? 'Deze hoogwaardige bladvoeding wordt rechtstreeks op bladeren, stengels, bloemen en vruchten aangebracht, waardoor nutriënten snel en efficiënt worden opgenomen precies daar waar de plant ze het hardst nodig heeft.'
@@ -83,8 +83,8 @@ export default async function ProductShield({
             ? 'PlantiPower Shield werkt niet door de natuur te forceren, maar door haar eigen systemen te ondersteunen. Het resultaat is een gewas dat zichzelf kan verdedigen en optimaal kan profiteren van de aanwezige nutriënten.'
             : 'PlantiPower Shield does not work by forcing nature, but by supporting its own systems. The result is a crop that can defend itself and optimally benefit from available nutrients.',
         usps: isNL
-            ? ["Optimale verdeling over het bladoppervlak", "Naadloze integratie in voedingsschema's", "Geen veiligheidstermijn voor de oogst", "Speciaal ontwikkeld voor de professionele teelt"]
-            : ["Optimal distribution over the leaf surface", "Seamless integration into feeding schedules", "No pre-harvest safety interval", "Specially developed for professional cultivation"],
+            ? ["Optimale verdeling over het bladoppervlak", "Naadloze integratie in je voedingsschema's", "3 dagen veiligheidstermijn voor de oogst", "Speciaal ontwikkeld voor de professionele teelt"]
+            : ["Optimal distribution over the leaf surface", "Seamless integration into your feeding schedules", "3-day pre-harvest safety interval", "Specially developed for professional cultivation"],
         compositionTitle: isNL ? 'Samenstelling' : 'Composition',
         baseTitle: isNL ? 'Basis' : 'Base',
         baseDesc: isNL ? 'Emulgator afkomstig van plantaardige olie' : 'Emulsifier derived from vegetable oil',

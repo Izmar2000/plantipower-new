@@ -32,7 +32,7 @@ const NutrientGrid = () => {
     ];
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-x-24 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-x-12 lg:gap-x-16 text-left">
             <div>
                 <h4 className="text-lime-500 font-black text-lg uppercase tracking-[0.2em] mb-8 border-b border-white/10 pb-4 font-outfit">{content.macro}</h4>
                 <ul className="space-y-4">

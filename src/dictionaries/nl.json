@@ -49,6 +49,7 @@
         "badge": "Het Resultaat",
         "title": "Gevalideerde",
         "titleHighlight": "praktijkresultaten.",
+        "validated": "Gevalideerd",
         "description": "Van tomatenteelt tot komkommerteelt: PlantiPower maximaliseert de opnamecapaciteit in elke professionele setting.",
         "crops": [
             {
@@ -157,7 +158,7 @@
     "Contact": {
         "title": "Neem contact op",
         "titleAccent": "vandaag nog",
-        "desc": "Wilt u uw teelt optimaliseren en meer rendement uit uw gewassen halen? Vraag een monster aan of neem contact met ons op voor persoonlijk advies.",
+        "desc": "Wil je jouw teelt optimaliseren en meer rendement uit jouw gewassen halen? Vraag een monster aan of neem contact met ons op voor persoonlijk advies.",
         "labelName": "Naam",
         "labelCompany": "Bedrijf",
         "labelEmail": "E-mail",
@@ -165,7 +166,7 @@
         "btnSend": "Aanvraag Verzenden",
         "sending": "Verzenden...",
         "successTitle": "Bericht Verzonden!",
-        "successMsg": "Bedankt voor uw bericht. We nemen zo snel mogelijk contact met u op.",
+        "successMsg": "Bedankt voor je bericht. We nemen zo snel mogelijk contact met je op.",
         "newMsg": "Nieuw bericht sturen",
         "subject": "Nieuw Contactbericht",
         "metaTitle": "Contact | PlantiPower",
@@ -176,9 +177,9 @@
     "ContactPage": {
         "title": "Neem",
         "titleAccent": "contact op",
-        "description": "Heeft u vragen over onze producten of wilt u partner worden? Wij staan voor u klaar.",
+        "description": "Heb je vragen over onze producten of wil je partner worden? Wij staan voor je klaar.",
         "metaTitle": "Contact | PlantiPower",
-        "metaDesc": "Neem contact op met PlantiPower. Vragen over producten, partnerships of distributie? Wij helpen u graag."
+        "metaDesc": "Neem contact op met PlantiPower. Vragen over producten, partnerships of distributie? Wij helpen je graag."
     },
     "FAQ": {
         "title": "VEELGESTELDE",
@@ -196,7 +197,7 @@
             },
             {
                 "q": "Is PlantiPower een meststof?",
-                "a": "Nee, PlantiPower is geen meststof maar een biostimulant en transportmiddel dat de werking van uw bestaande meststoffen versterkt."
+                "a": "Nee, PlantiPower is geen meststof maar een biostimulant en transportmiddel dat de werking van je bestaande meststoffen versterkt."
             },
             {
                 "q": "Kan ik het gebruiken met andere meststoffen?",
@@ -208,7 +209,7 @@
             },
             {
                 "q": "Welke verpakkingsgroottes zijn er?",
-                "a": "All12 is verkrijgbaar in 1 liter, 10 liter en 1000 liter. Shield is verkrijgbaar in 60ml (sample), 1 liter, 10 liter en 1000 liter. Afwijkende hoeveelheden/verpakkingen in overleg."
+                "a": "All12 is verkrijgbaar in 1 liter, 10 liter en 1000 liter. Shield is verkrijgbaar in 1 liter en 5 liter. Afwijkende hoeveelheden/verpakkingen in overleg."
             },
             {
                 "q": "Voor welke gewassen is PlantiPower geschikt?",
@@ -236,7 +237,7 @@
             },
             {
                 "q": "Hoe gebruik ik PlantiPower?",
-                "a": "Meng de geadviseerde hoeveelheid met water en dien toe via uw reguliere bewateringssysteem. Zie de verpakking voor exacte instructies."
+                "a": "Meng de geadviseerde hoeveelheid met water en dien toe via je reguliere bewateringssysteem. Zie de verpakking voor exacte instructies."
             }
         ]
     },

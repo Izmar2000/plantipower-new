@@ -87,7 +87,7 @@ const CropResults: React.FC<CropResultsProps> = ({ dict }) => {
                             {/* Top Right Validator Badge (For Cucumber) */}
                             {crop.hasBadge && (
                                 <div className="absolute top-0 right-0 z-20 bg-white rounded-bl-[2.5rem] px-8 py-6 shadow-xl flex flex-col items-center">
-                                    <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#011410]/40 mb-2">Gevalideerd</span>
+                                    <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#011410]/40 mb-2">{t.validated}</span>
                                     <div className="w-24 h-12 flex items-center justify-center">
                                         <img
                                             src="/images/vangog-logo.png"

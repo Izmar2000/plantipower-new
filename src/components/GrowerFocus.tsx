@@ -2,13 +2,14 @@
 
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
+import { useModals } from '../context/ModalContext';
 
 interface GrowerFocusProps {
-    onOpenSample?: () => void;
     dict: any;
 }
 
-const GrowerFocus: React.FC<GrowerFocusProps> = ({ onOpenSample, dict }) => {
+const GrowerFocus: React.FC<GrowerFocusProps> = ({ dict }) => {
+    const { openSampleModal } = useModals();
     const t = dict.GrowerFocus;
 
     return (
@@ -66,7 +67,7 @@ const GrowerFocus: React.FC<GrowerFocusProps> = ({ onOpenSample, dict }) => {
 
                         <div className="pt-2">
                             <button
-                                onClick={onOpenSample}
+                                onClick={openSampleModal}
                                 className="btn-standard bg-lime-500 hover:bg-lime-400 text-emerald-950 shadow-xl"
                             >
                                 {t.cta}
