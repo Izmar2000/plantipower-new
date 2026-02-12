@@ -17,12 +17,12 @@ export async function generateMetadata(
   const lang = params.lang
 
   const title = lang === 'nl'
-    ? 'PlantiPower - Natuurlijke kracht voor planten'
-    : 'PlantiPower - Natural power for plants'
+    ? 'PlantiPower – Efficiënte plantengroei & hogere opbrengst'
+    : 'PlantiPower – Efficient Plant Growth & Higher Yields'
 
   const description = lang === 'nl'
-    ? 'De beste natuurlijke plantenvoeding voor professionele teelt.'
-    : 'The best natural plant nutrition for professional cultivation.'
+    ? 'Boost je teelt met PlantiPower: een 100% natuurlijke voedingstransporteur voor minder verspilling, betere opname en een gezonder gewas.'
+    : 'Boost your cultivation with PlantiPower: a 100% natural nutrient transporter to eliminate waste, ensure better uptake, and achieve healthier crops.'
 
   return {
     title,
