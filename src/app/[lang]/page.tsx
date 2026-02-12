@@ -27,6 +27,27 @@ export async function generateMetadata(
   return {
     title,
     description,
+    openGraph: {
+      title,
+      description,
+      siteName: 'PlantiPower',
+      images: [
+        {
+          url: '/images/root-sketch.png',
+          width: 1200,
+          height: 630,
+          alt: 'PlantiPower Technology',
+        },
+      ],
+      locale: lang === 'nl' ? 'nl_NL' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/images/root-sketch.png'],
+    },
   }
 }
 

@@ -13,8 +13,28 @@ import {
     Leaf
 } from 'lucide-react';
 import ClientLayout from '@/components/ClientLayout';
+import { Metadata, ResolvingMetadata } from 'next';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
+
+export async function generateMetadata(
+    props: { params: Promise<{ lang: Locale }> },
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const params = await props.params;
+    const lang = params.lang;
+    const isNL = lang === 'nl';
+
+    return {
+        title: isNL ? 'PlantiPower All12 | Professionele Nutriënt Transport' : 'PlantiPower All12 | Professional Nutrient Transport',
+        description: isNL ? 'Ontdek PlantiPower All12 - de ultieme nutriënt transport technologie voor professionele kwekers.' : 'Discover PlantiPower All12 - the ultimate nutrient transport technology for professional growers.',
+        openGraph: {
+            title: isNL ? 'PlantiPower All12 | Professionele Nutriënt Transport' : 'PlantiPower All12 | Professional Nutrient Transport',
+            description: isNL ? 'Maximale opname van alle 12 essentiële elementen.' : 'Maximum uptake of all 12 essential elements.',
+            images: ['/images/products/plantipower-all12-transparant.png'],
+        }
+    }
+}
 
 export default async function ProductAll12({
     params,

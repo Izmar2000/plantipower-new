@@ -11,8 +11,28 @@ import {
     Zap
 } from 'lucide-react';
 import ClientLayout from '@/components/ClientLayout';
+import { Metadata, ResolvingMetadata } from 'next';
 import { getDictionary } from '@/get-dictionary';
 import { Locale } from '@/i18n-config';
+
+export async function generateMetadata(
+    props: { params: Promise<{ lang: Locale }> },
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const params = await props.params;
+    const lang = params.lang;
+    const isNL = lang === 'nl';
+
+    return {
+        title: isNL ? 'PlantiPower Shield | Onzichtbare Kracht & Weerbaarheid' : 'PlantiPower Shield | Invisible Force & Resilience',
+        description: isNL ? 'Verhoog de natuurlijke weerbaarheid van je gewas met PlantiPower Shield. Biologische bescherming zonder residu.' : 'Increase the natural resilience of your crop with PlantiPower Shield. Organic protection without residue.',
+        openGraph: {
+            title: isNL ? 'PlantiPower Shield | Onzichtbare Kracht & Weerbaarheid' : 'PlantiPower Shield | Invisible Force & Resilience',
+            description: isNL ? 'Natuurlijke bladvoeding voor maximale gewasbescherming.' : 'Natural foliar nutrition for maximum crop protection.',
+            images: ['/images/products/plantipower-shield-transparant.png'],
+        }
+    }
+}
 
 export default async function ProductShield({
     params,

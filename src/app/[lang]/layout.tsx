@@ -15,9 +15,41 @@ const outfit = Outfit({
   display: 'swap',
 })
 
-export const metadata: Metadata = {
-  title: 'PlantiPower - Natuurlijke kracht voor planten',
-  description: 'De beste natuurlijke plantenvoeding.',
+import { ResolvingMetadata } from 'next'
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ lang: string }> },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { lang } = await params
+
+  const title = lang === 'nl'
+    ? 'PlantiPower - Natuurlijke kracht voor planten'
+    : 'PlantiPower - Natural power for plants'
+
+  const description = lang === 'nl'
+    ? 'De beste natuurlijke plantenvoeding voor professionele teelt. Innovatie in vloeibare voeding.'
+    : 'The best natural plant nutrition for professional cultivation. Innovation in liquid nutrition.'
+
+  return {
+    title: {
+      default: title,
+      template: '%s | PlantiPower'
+    },
+    description,
+    metadataBase: new URL('https://plantipower.com'),
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        'nl-NL': '/nl',
+        'en-US': '/en',
+      },
+    },
+    icons: {
+      icon: '/favicon.ico',
+      apple: '/favicon.ico',
+    },
+  }
 }
 
 export async function generateStaticParams() {
