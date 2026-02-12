@@ -118,7 +118,8 @@ const Header: React.FC<HeaderProps> = ({ onOpenSample, onOpenMenu, dict, lang })
             {/* Mobile Menu Toggle */}
             <button
               onClick={onOpenMenu}
-              className="relative z-50 md:hidden p-2 -mr-2 text-white hover:text-lime-400 transition-colors"
+              aria-label="Toggle Menu"
+              className="relative z-50 md:hidden w-12 h-12 flex items-center justify-center -mr-2 text-white hover:text-lime-400 active:scale-90 transition-all bg-white/5 rounded-full border border-white/10"
             >
               <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

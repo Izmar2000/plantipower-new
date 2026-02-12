@@ -77,9 +77,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                                 <Link
                                     key={item.path}
                                     href={getPath(item.path)}
-                                    className={`flex items-center justify-between p-5 rounded-2xl transition-all border relative z-20 ${isActive(item.path)
-                                        ? 'bg-lime-500/10 border-lime-500/30 text-lime-400'
-                                        : 'bg-white/5 border-white/5 text-white hover:border-white/20'
+                                    onClick={onClose}
+                                    className={`flex items-center justify-between p-5 rounded-2xl transition-all border relative z-20 cursor-pointer active:scale-[0.98] ${isActive(item.path)
+                                            ? 'bg-lime-500/10 border-lime-500/30 text-lime-400'
+                                            : 'bg-white/5 border-white/5 text-white hover:border-white/20 active:bg-white/10'
                                         }`}
                                 >
                                     <div className="flex items-center gap-4">
@@ -101,9 +102,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                             <div className="grid grid-cols-1 gap-3">
                                 <Link
                                     href={getPath('/products/all12')}
-                                    className={`relative overflow-hidden p-6 rounded-2xl border transition-all group z-20 ${isActive('/products/all12')
-                                        ? 'bg-gradient-to-br from-emerald-900/50 to-emerald-950 border-lime-500/50'
-                                        : 'bg-white/5 border-white/5 hover:border-white/20'
+                                    onClick={onClose}
+                                    className={`relative overflow-hidden p-6 rounded-2xl border transition-all group z-20 cursor-pointer active:scale-[0.98] ${isActive('/products/all12')
+                                            ? 'bg-gradient-to-br from-emerald-900/50 to-emerald-950 border-lime-500/50'
+                                            : 'bg-white/5 border-white/5 hover:border-white/20 active:bg-white/10'
                                         }`}
                                 >
                                     <div className="relative z-10 flex flex-col">
@@ -118,9 +120,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
 
                                 <Link
                                     href={getPath('/products/shield')}
-                                    className={`relative overflow-hidden p-6 rounded-2xl border transition-all group z-20 ${isActive('/products/shield')
-                                        ? 'bg-gradient-to-br from-blue-900/40 to-emerald-950 border-blue-500/50'
-                                        : 'bg-white/5 border-white/5 hover:border-white/20'
+                                    onClick={onClose}
+                                    className={`relative overflow-hidden p-6 rounded-2xl border transition-all group z-20 cursor-pointer active:scale-[0.98] ${isActive('/products/shield')
+                                            ? 'bg-gradient-to-br from-blue-900/40 to-emerald-950 border-blue-500/50'
+                                            : 'bg-white/5 border-white/5 hover:border-white/20 active:bg-white/10'
                                         }`}
                                 >
                                     <div className="relative z-10 flex flex-col">
@@ -143,9 +146,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                                 <Link
                                     key={item.path}
                                     href={getPath(item.path)}
-                                    className={`flex flex-col gap-3 p-5 rounded-2xl transition-all border relative z-20 ${isActive(item.path)
-                                        ? 'bg-lime-500/10 border-lime-500/30 text-lime-400'
-                                        : 'bg-white/5 border-white/5 text-white'
+                                    onClick={onClose}
+                                    className={`flex flex-col gap-3 p-5 rounded-2xl transition-all border relative z-20 cursor-pointer active:scale-[0.98] ${isActive(item.path)
+                                            ? 'bg-lime-500/10 border-lime-500/30 text-lime-400'
+                                            : 'bg-white/5 border-white/5 text-white active:bg-white/10'
                                         }`}
                                 >
                                     <item.icon className={`w-5 h-5 ${isActive(item.path) ? 'text-lime-400' : 'text-white/20'}`} />
@@ -164,13 +168,15 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                                 <div className="flex items-center gap-4 bg-white/5 p-1 rounded-full border border-white/5 relative z-20">
                                     <Link
                                         href="/en"
-                                        className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${!isNL ? 'bg-lime-500 text-emerald-950' : 'text-white/40 hover:text-white'}`}
+                                        onClick={onClose}
+                                        className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${!isNL ? 'bg-lime-500 text-emerald-950' : 'text-white/40 hover:text-white'}`}
                                     >
                                         EN
                                     </Link>
                                     <Link
                                         href="/nl"
-                                        className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${isNL ? 'bg-lime-500 text-emerald-950' : 'text-white/40 hover:text-white'}`}
+                                        onClick={onClose}
+                                        className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${isNL ? 'bg-lime-500 text-emerald-950' : 'text-white/40 hover:text-white'}`}
                                     >
                                         NL
                                     </Link>
@@ -178,8 +184,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                             </div>
 
                             <button
-                                onClick={onOpenSample}
-                                className="w-full bg-lime-500 text-emerald-950 font-black py-5 px-5 rounded-2xl transition-all text-sm uppercase tracking-[0.2em] shadow-[0_10px_30px_rgba(132,204,22,0.2)] active:scale-[0.98] border-b-4 border-lime-700 relative z-20"
+                                onClick={() => { onOpenSample(); onClose(); }}
+                                className="w-full bg-lime-500 text-emerald-950 font-black py-5 px-5 rounded-2xl transition-all text-sm uppercase tracking-[0.2em] shadow-[0_10px_30px_rgba(132,204,22,0.2)] active:scale-[0.95] border-b-4 border-lime-700 relative z-20 cursor-pointer"
                             >
                                 {t?.cta || "SAMPLE AANVRAGEN"}
                             </button>
