@@ -33,22 +33,22 @@ const InteractivePlantHero = () => {
     // Shifted all x-coordinates +0.5% right
     const nutrients = [
         // MACRO (The Big Ones - Neon Lime for Maximum Impact)
-        { id: 'N', x: 25.5, y: 65, size: 60, color: '#a3e635', label: 'N', type: 'macro' },  // Lime-400 (Brighter)
-        { id: 'P', x: 50.5, y: 85, size: 60, color: '#a3e635', label: 'P', type: 'macro' },  // Lime-400
-        { id: 'K', x: 75.5, y: 65, size: 60, color: '#a3e635', label: 'K', type: 'macro' },  // Lime-400
+        { id: 'N', x: 25.5, y: 65, size: 90, color: '#a3e635', label: 'N', type: 'macro' },  // Lime-400 (Brighter)
+        { id: 'P', x: 50.5, y: 85, size: 90, color: '#a3e635', label: 'P', type: 'macro' },  // Lime-400
+        { id: 'K', x: 75.5, y: 65, size: 90, color: '#a3e635', label: 'K', type: 'macro' },  // Lime-400
 
         // SECONDARY (Medium size - Bright Emerald)
-        { id: 'Ca', x: 35.5, y: 60, size: 45, color: '#34d399', label: 'Ca', type: 'secondary' }, // Emerald-400
-        { id: 'Mg', x: 65.5, y: 60, size: 45, color: '#34d399', label: 'Mg', type: 'secondary' }, // Emerald-400
-        { id: 'S', x: 50.5, y: 72, size: 45, color: '#34d399', label: 'S', type: 'secondary' },  // Emerald-400
+        { id: 'Ca', x: 35.5, y: 60, size: 70, color: '#34d399', label: 'Ca', type: 'secondary' }, // Emerald-400
+        { id: 'Mg', x: 65.5, y: 60, size: 70, color: '#34d399', label: 'Mg', type: 'secondary' }, // Emerald-400
+        { id: 'S', x: 50.5, y: 72, size: 70, color: '#34d399', label: 'S', type: 'secondary' },  // Emerald-400
 
         // MICRO (Smaller - Vivid Teal)
-        { id: 'Fe', x: 20.5, y: 55, size: 35, color: '#2dd4bf', label: 'Fe', type: 'micro' }, // Teal-400
-        { id: 'Mn', x: 80.5, y: 55, size: 35, color: '#2dd4bf', label: 'Mn', type: 'micro' }, // Teal-400
-        { id: 'Zn', x: 25.5, y: 85, size: 35, color: '#2dd4bf', label: 'Zn', type: 'micro' }, // Teal-400
-        { id: 'B', x: 75.5, y: 85, size: 35, color: '#2dd4bf', label: 'B', type: 'micro' },  // Teal-400
-        { id: 'Cu', x: 40.5, y: 80, size: 30, color: '#14b8a6', label: 'Cu', type: 'micro' }, // Teal-500
-        { id: 'Mo', x: 60.5, y: 80, size: 30, color: '#14b8a6', label: 'Mo', type: 'micro' }, // Teal-500
+        { id: 'Fe', x: 20.5, y: 55, size: 55, color: '#2dd4bf', label: 'Fe', type: 'micro' }, // Teal-400
+        { id: 'Mn', x: 80.5, y: 55, size: 55, color: '#2dd4bf', label: 'Mn', type: 'micro' }, // Teal-400
+        { id: 'Zn', x: 25.5, y: 85, size: 55, color: '#2dd4bf', label: 'Zn', type: 'micro' }, // Teal-400
+        { id: 'B', x: 75.5, y: 85, size: 55, color: '#2dd4bf', label: 'B', type: 'micro' },  // Teal-400
+        { id: 'Cu', x: 40.5, y: 80, size: 50, color: '#14b8a6', label: 'Cu', type: 'micro' }, // Teal-500
+        { id: 'Mo', x: 60.5, y: 80, size: 50, color: '#14b8a6', label: 'Mo', type: 'micro' }, // Teal-500
     ];
 
     // Create an expanded array of particles for a "fuller" but smoother flow
@@ -63,7 +63,7 @@ const InteractivePlantHero = () => {
 
             {/* Background Image (Clean Base) */}
             <motion.div
-                className="relative w-full max-w-[750px] aspect-[4/5]"
+                className="relative w-full max-w-[900px] aspect-[4/5]"
                 style={{
                     scale,
                     opacity
