@@ -7,21 +7,21 @@ const InteractivePlantHero = () => {
     const [isMounted, setIsMounted] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
-
-    // Scrollytelling hook
+    // Scrollytelling hook - Always call hooks at top level
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end start"]
     });
 
-    if (!isMounted) return <div ref={containerRef} className="min-h-[600px] w-full flex items-center justify-center -mt-10 lg:-mt-20 pointer-events-none opacity-0" />; // Placeholder with ref to satisfy useScroll
-
     const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
     const scale = useTransform(smoothProgress, [0, 1], [1, 1.05]);
     const opacity = useTransform(smoothProgress, [0, 0.5], [1, 0]);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    if (!isMounted) return <div ref={containerRef} className="min-h-[600px] w-full flex items-center justify-center -mt-10 lg:-mt-20 pointer-events-none opacity-0" />; // Placeholder with ref to satisfy useScroll
 
     // CONFIGURATION
     // Calibrated Center Point (percentage of width)
