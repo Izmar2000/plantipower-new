@@ -3,7 +3,7 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, Home, Info, ShoppingBag, MessageSquare, HelpCircle, ChevronRight, Globe } from 'lucide-react';
 import Link from 'next/link';
 
 interface MobileMenuProps {
@@ -22,104 +22,180 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
 
     const getPath = (basePath: string) => `/${lang}${basePath === '/' ? '' : basePath}`;
 
-    // Adjusted logic: if basePath is '/', standard isActive might match /nl/about because it starts with /nl
-    // So for '/', we must check exact match with /{lang}
     const isActive = (path: string) => {
         const fullPath = getPath(path);
         if (path === '/') return pathname === fullPath;
         return pathname.startsWith(fullPath);
     };
 
+    const navItems = [
+        { name: t?.home || "HOME", path: '/', icon: Home },
+        { name: t?.about || "ABOUT", path: '/about', icon: Info },
+    ];
+
+    const secondaryItems = [
+        { name: t?.faq || "FAQ", path: '/faq', icon: HelpCircle },
+        { name: t?.contact || "CONTACT", path: '/contact', icon: MessageSquare },
+    ];
+
     return (
-        <>
+        <AnimatePresence>
             {open && (
-                <div className="fixed inset-0 z-[9999999] bg-[#011410] overflow-y-auto custom-scrollbar">
-                    <div className="flex flex-col min-h-full">
-                        {/* Header in Menu */}
-                        <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
-                            <Link href={`/${lang}`} onClick={onClose} className="h-12 relative z-50">
-                                <img
-                                    src="https://irp.cdn-website.com/480e14da/dms3rep/multi/Planti-Power-Logo-.png"
-                                    alt="PlantiPower"
-                                    className="h-full object-contain"
-                                />
-                            </Link>
-                            <button onClick={onClose} className="p-2 text-white hover:text-lime-400 transition-colors relative z-50">
-                                <X className="w-8 h-8" />
-                            </button>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3, ease: 'easeOut' }}
+                    className="fixed inset-0 z-[9999999] bg-[#011410] overflow-y-auto custom-scrollbar flex flex-col"
+                >
+                    {/* Background decorative elements */}
+                    <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-emerald-500/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+                    <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-lime-500/5 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+
+                    {/* Header in Menu */}
+                    <div className="flex justify-between items-center px-6 py-6 border-b border-white/5 relative z-50">
+                        <Link href={`/${lang}`} onClick={onClose} className="h-10">
+                            <img
+                                src="https://irp.cdn-website.com/480e14da/dms3rep/multi/Planti-Power-Logo-.png"
+                                alt="PlantiPower"
+                                className="h-full object-contain"
+                            />
+                        </Link>
+                        <button
+                            onClick={onClose}
+                            className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-white/10 transition-all border border-white/10 active:scale-95"
+                        >
+                            <X className="w-6 h-6" />
+                        </button>
+                    </div>
+
+                    {/* Content Scrollable Area */}
+                    <div className="flex-1 flex flex-col pt-8 pb-12 px-6 relative z-10">
+                        {/* Primary Nav */}
+                        <div className="grid grid-cols-1 gap-4 mb-10">
+                            {navItems.map((item) => (
+                                <Link
+                                    key={item.path}
+                                    href={getPath(item.path)}
+                                    onClick={onClose}
+                                    className={`flex items-center justify-between p-5 rounded-2xl transition-all border ${isActive(item.path)
+                                            ? 'bg-lime-500/10 border-lime-500/30 text-lime-400'
+                                            : 'bg-white/5 border-white/5 text-white hover:border-white/20'
+                                        }`}
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <item.icon className={`w-5 h-5 ${isActive(item.path) ? 'text-lime-400' : 'text-emerald-100/40'}`} />
+                                        <span className="text-lg font-bold tracking-widest uppercase">{item.name}</span>
+                                    </div>
+                                    <ChevronRight className={`w-4 h-4 transition-transform ${isActive(item.path) ? 'translate-x-1' : 'opacity-0'}`} />
+                                </Link>
+                            ))}
                         </div>
 
-                        {/* Links */}
-                        <nav className="flex-1 flex flex-col justify-start pt-16 px-8 gap-10 pb-12">
-                            <Link
-                                href={getPath('/')}
-                                onClick={onClose}
-                                className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/') ? 'text-lime-400' : 'text-white'}`}
-                            >
-                                {t?.home || "HOME"}
-                            </Link>
-                            <Link
-                                href={getPath('/about')}
-                                onClick={onClose}
-                                className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/about') ? 'text-lime-400' : 'text-white'}`}
-                            >
-                                {t?.about || "ABOUT"}
-                            </Link>
+                        {/* Products Section */}
+                        <div className="mb-10">
+                            <div className="flex items-center gap-3 mb-6 px-2">
+                                <div className="w-1 h-4 bg-lime-500 rounded-full"></div>
+                                <span className="text-white/40 text-xs font-black uppercase tracking-[0.4em]">{t?.products || "PRODUCTEN"}</span>
+                            </div>
 
-                            <div className="flex flex-col gap-6 py-2">
-                                <span className="text-white text-base font-black uppercase tracking-[0.4em] mb-2">{t?.products || "PRODUCTEN"}</span>
+                            <div className="grid grid-cols-1 gap-3">
                                 <Link
                                     href={getPath('/products/all12')}
                                     onClick={onClose}
-                                    className={`text-xl font-bold tracking-widest uppercase transition-colors ${isActive('/products/all12') ? 'text-lime-400' : 'text-white'}`}
+                                    className={`relative overflow-hidden p-6 rounded-2xl border transition-all group ${isActive('/products/all12')
+                                            ? 'bg-gradient-to-br from-emerald-900/50 to-emerald-950 border-lime-500/50'
+                                            : 'bg-white/5 border-white/5 hover:border-white/20'
+                                        }`}
                                 >
-                                    All12
+                                    <div className="relative z-10 flex flex-col">
+                                        <div className="flex justify-between items-center mb-1">
+                                            <span className="text-xl font-black tracking-widest text-white uppercase group-hover:text-lime-400 transition-colors">All12</span>
+                                            <ShoppingBag className="w-5 h-5 text-emerald-100/20 group-hover:text-lime-500/40 transition-colors" />
+                                        </div>
+                                        <span className="text-emerald-100/30 text-[10px] font-bold tracking-widest uppercase">Technology & Roots</span>
+                                    </div>
+                                    <div className="absolute bottom-0 right-0 w-24 h-24 bg-lime-500/5 blur-2xl rounded-full translate-x-1/2 translate-y-1/2"></div>
                                 </Link>
+
                                 <Link
                                     href={getPath('/products/shield')}
                                     onClick={onClose}
-                                    className={`text-xl font-bold tracking-widest uppercase transition-colors ${isActive('/products/shield') ? 'text-lime-400' : 'text-white'}`}
+                                    className={`relative overflow-hidden p-6 rounded-2xl border transition-all group ${isActive('/products/shield')
+                                            ? 'bg-gradient-to-br from-blue-900/40 to-emerald-950 border-blue-500/50'
+                                            : 'bg-white/5 border-white/5 hover:border-white/20'
+                                        }`}
                                 >
-                                    Shield
+                                    <div className="relative z-10 flex flex-col">
+                                        <div className="flex justify-between items-center mb-1">
+                                            <span className="text-xl font-black tracking-widest text-white uppercase group-hover:text-blue-400 transition-colors">Shield</span>
+                                            <div className="w-5 h-5 text-emerald-100/20 group-hover:text-blue-500/40 transition-colors">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                            </div>
+                                        </div>
+                                        <span className="text-emerald-100/30 text-[10px] font-bold tracking-widest uppercase">Protection & Vitality</span>
+                                    </div>
+                                    <div className="absolute bottom-0 right-0 w-24 h-24 bg-blue-500/5 blur-2xl rounded-full translate-x-1/2 translate-y-1/2"></div>
                                 </Link>
                             </div>
+                        </div>
 
-                            <Link
-                                href={getPath('/faq')}
-                                onClick={onClose}
-                                className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/faq') ? 'text-lime-400' : 'text-white'}`}
-                            >
-                                {t?.faq || "FAQ"}
-                            </Link>
-                            <Link
-                                href={getPath('/contact')}
-                                onClick={onClose}
-                                className={`text-2xl font-bold tracking-widest uppercase transition-colors ${isActive('/contact') ? 'text-lime-400' : 'text-white'}`}
-                            >
-                                {t?.contact || "CONTACT"}
-                            </Link>
-                        </nav>
+                        {/* Secondary Nav Items */}
+                        <div className="grid grid-cols-2 gap-3 mb-12">
+                            {secondaryItems.map((item) => (
+                                <Link
+                                    key={item.path}
+                                    href={getPath(item.path)}
+                                    onClick={onClose}
+                                    className={`flex flex-col gap-3 p-5 rounded-2xl transition-all border ${isActive(item.path)
+                                            ? 'bg-lime-500/10 border-lime-500/30 text-lime-400'
+                                            : 'bg-white/5 border-white/5 text-white'
+                                        }`}
+                                >
+                                    <item.icon className={`w-5 h-5 ${isActive(item.path) ? 'text-lime-400' : 'text-white/20'}`} />
+                                    <span className="text-[12px] font-black tracking-widest uppercase">{item.name}</span>
+                                </Link>
+                            ))}
+                        </div>
 
-                        {/* Footer of Menu */}
-                        <div className="p-8 border-t border-white/10 flex flex-col gap-6 bg-[#011410]">
-                            <div className="flex items-center gap-6 text-sm font-bold tracking-widest uppercase">
-                                <Link href="/en" onClick={onClose} className={!isNL ? 'text-lime-400' : 'text-white/50'}>EN</Link>
-                                <span className="text-white/20">|</span>
-                                <Link href="/nl" onClick={onClose} className={isNL ? 'text-lime-400' : 'text-white/50'}>NL</Link>
+                        {/* Language & CTA */}
+                        <div className="mt-auto flex flex-col gap-6 pt-6 border-t border-white/5">
+                            <div className="flex items-center justify-between px-2">
+                                <div className="flex items-center gap-3">
+                                    <Globe className="w-4 h-4 text-white/20" />
+                                    <span className="text-white/20 text-[10px] font-black uppercase tracking-[0.2em]">Select Language</span>
+                                </div>
+                                <div className="flex items-center gap-4 bg-white/5 p-1 rounded-full border border-white/5">
+                                    <Link
+                                        href="/en"
+                                        onClick={onClose}
+                                        className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${!isNL ? 'bg-lime-500 text-emerald-950' : 'text-white/40 hover:text-white'}`}
+                                    >
+                                        EN
+                                    </Link>
+                                    <Link
+                                        href="/nl"
+                                        onClick={onClose}
+                                        className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all ${isNL ? 'bg-lime-500 text-emerald-950' : 'text-white/40 hover:text-white'}`}
+                                    >
+                                        NL
+                                    </Link>
+                                </div>
                             </div>
 
                             <button
                                 onClick={onOpenSample}
-                                className="w-full bg-lime-500 text-emerald-950 font-bold py-4 px-5 rounded-2xl transition-all text-xs uppercase tracking-[0.2em] shadow-lg shadow-lime-500/10"
+                                className="w-full bg-lime-500 text-emerald-950 font-black py-5 px-5 rounded-2xl transition-all text-sm uppercase tracking-[0.2em] shadow-[0_10px_30px_rgba(132,204,22,0.2)] active:scale-[0.98] border-b-4 border-lime-700"
                             >
                                 {t?.cta || "SAMPLE AANVRAGEN"}
                             </button>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             )}
-        </>
+        </AnimatePresence>
     );
 };
 
 export default MobileMenu;
+
