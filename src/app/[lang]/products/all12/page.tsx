@@ -239,8 +239,8 @@ export default async function ProductAll12({
                                     {content.spectrumDesc}
                                 </p>
                             </div>
-                            <div className="relative bg-white/[0.02] border border-white/5 rounded-[2rem] p-8">
-                                <NutrientGrid />
+                            <div className="relative bg-white/[0.02] border border-white/5 rounded-[2rem] p-8 pr-8 lg:pr-12">
+                                <NutrientGrid dict={dict} />
                             </div>
                         </div>
 

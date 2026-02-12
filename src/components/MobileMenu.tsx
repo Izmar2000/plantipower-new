@@ -69,13 +69,13 @@ const MobileMenu: FC<MobileMenuProps> = ({ open, onClose, onOpenSample, dict, la
                         onClick={onClose}
                         className={`text-3xl font-black uppercase tracking-tighter py-2 transition-colors ${isActive('about') ? 'text-lime-400' : 'text-white'}`}
                     >
-                        {t?.about || "Over ons"}
+                        {t?.aboutLabel || (isNL ? "Over ons" : "About")}
                     </Link>
                 </div>
 
                 {/* Product Subsection */}
                 <div className="flex flex-col gap-4">
-                    <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.4em] mb-2">Producten</div>
+                    <div className="text-white/20 text-[10px] font-black uppercase tracking-[0.4em] mb-2">{isNL ? "Producten" : "Products"}</div>
                     <Link
                         href={getPath('products/all12', lang)}
                         onClick={onClose}

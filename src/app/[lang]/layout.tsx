@@ -46,9 +46,15 @@ export async function generateMetadata(
       },
     },
     icons: {
-      icon: '/favicon.ico',
-      apple: '/favicon.ico',
+      icon: [
+        { url: '/favicon.ico' },
+        { url: '/icon.png', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/apple-touch-icon.png' },
+      ],
     },
+    manifest: '/manifest.json',
   }
 }
 

@@ -9,7 +9,8 @@
         "all12": "PlantiPower All12",
         "all12Desc": "Optimaliseer de opname",
         "shield": "PlantiPower Shield",
-        "shieldDesc": "Maximale weerbaarheid"
+        "shieldDesc": "Maximale weerbaarheid",
+        "aboutLabel": "Over ons"
     },
     "Hero": {
         "titleLine1": "MEER OPNAME",
@@ -257,5 +258,10 @@
             "line2": "5916 PS Venlo",
             "country": "Nederland"
         }
+    },
+    "NutrientGrid": {
+        "macro": "Macro Elementen",
+        "secondary": "Secundaire Elementen",
+        "micro": "Micro Elementen"
     }
 }

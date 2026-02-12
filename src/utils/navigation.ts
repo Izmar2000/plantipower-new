@@ -2,9 +2,9 @@ import { Locale } from '@/i18n-config';
 
 const slugMap: Record<string, Record<string, string>> = {
     en: {
-        'about': 'about',
-        'products/all12': 'products/all12',
-        'products/shield': 'products/shield',
+        'about': 'about-us',
+        'products/all12': 'plantipower-all12',
+        'products/shield': 'plantipower-shield',
         'faq': 'faq',
         'contact': 'contact'
     },

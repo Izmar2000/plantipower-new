@@ -1,0 +1,75 @@
+PLANTIPOWER WEBSITE — OPENSTAANDE FIXES (Ronde 2)
+===================================================
+Datum: 12 februari 2026
+Site: plantipower-new.vercel.app
+
+Hi! Hieronder de punten die nog opgelost moeten worden.
+Belangrijk: controleer na elke wijziging zelf of het daadwerkelijk
+is doorgevoerd op zowel NL als EN, desktop én mobiel. Check ook
+of er geen regressies zijn ontstaan op andere pagina's.
+
+
+-----------------------------------------------------------
+1. ALGEMEEN
+-----------------------------------------------------------
+
+[HIGH] Favicon
+→ Favicon wordt nog niet (correct) weergegeven.
+→ Controleer of het favicon correct is ingesteld in de <head>
+  (favicon.ico + apple-touch-icon + webmanifest).
+→ Test in meerdere browsers en als PWA-icoon.
+
+[HIGH] Engelse labels op NL-pagina's
+→ Er staan nog steeds Engelse product labels op Nederlandse
+  pagina's. 
+
+[HIGH] Slugs — Engelse variant moet dezelfde structuur volgen als NL
+→ De EN-slugs moeten hetzelfde patroon volgen als de NL-slugs,
+  maar dan met de Engelse variant.
+
+  Gewenste structuur:
+
+  NL:
+  /nl/over-ons
+  /nl/plantipower-all12
+  /nl/plantipower-shield
+  /nl/faq
+  /nl/contact
+
+  EN:
+  /about-us           (NIET /en/about)
+  /plantipower-all12  (NIET /en/products/all12)
+  /plantipower-shield (NIET /en/products/shield)
+  /faq
+  /contact
+
+
+-----------------------------------------------------------
+2. PLANTIPOWER ALL12 (NL + EN)
+-----------------------------------------------------------
+
+[HIGH] Elementen-box: rechter marge ontbreekt
+→ De box met macro/micro-elementen heeft geen marge (padding)
+  aan de rechterkant. De content plakt tegen de rechterrand.
+→ De rechter marge moet gelijk zijn aan de linker marge.
+→ Dit geldt voor zowel de NL- als de EN-versie.
+→ Test ook op mobiel — controleer of de box daar niet
+  overloopt of afsnijdt.
+
+
+-----------------------------------------------------------
+VERZOEK: ZELF VERIFIËREN
+-----------------------------------------------------------
+
+Kun je na het doorvoeren van bovenstaande wijzigingen zelf
+een volledige check doen? Controleer het volgende:
+
+□ Open elke pagina in NL én EN
+□ Check desktop (1440px+) én mobiel (390px)
+□ Controleer of alle slugs kloppen (zie lijst hierboven)
+□ Controleer of er nergens meer Engelse product labels staan
+□ Controleer of het favicon overal zichtbaar is
+□ Controleer of de elementen-box op ALL12 gelijke marges heeft
+□ Test alle knoppen en links (sample popup, CTA's, navigatie)
+
+Laat me weten als je vragen hebt of als iets onduidelijk is!

@@ -2,11 +2,11 @@
 
 import { usePathname } from 'next/navigation';
 
-const NutrientGrid = () => {
+const NutrientGrid = ({ dict }: { dict: any }) => {
     const pathname = usePathname();
     const isNL = pathname?.startsWith('/nl');
 
-    const content = {
+    const content = dict.NutrientGrid || {
         macro: isNL ? "Macro Elementen" : "Macro Nutrients",
         secondary: isNL ? "Secundaire Elementen" : "Secondary Nutrients",
         micro: isNL ? "Micro Elementen" : "Micro Nutrients"
