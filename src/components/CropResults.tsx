@@ -88,12 +88,11 @@ const CropResults: React.FC<CropResultsProps> = ({ dict }) => {
                             {crop.hasBadge && (
                                 <div className="absolute top-0 right-0 z-20 bg-white rounded-bl-[2.5rem] px-8 py-6 shadow-xl flex flex-col items-center">
                                     <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#011410]/40 mb-2">Gevalideerd</span>
-                                    {/* Placeholder for Van Gog Logo */}
-                                    <div className="h-8 w-20 bg-gray-200/50 rounded flex items-center justify-center">
+                                    <div className="h-12 w-32 flex items-center justify-center">
                                         <img
-                                            src="/logo-vangog.png"
-                                            alt="Van Gog"
-                                            className="h-full w-full object-contain mix-blend-multiply"
+                                            src="/images/vangog-logo.png"
+                                            alt="Van Gog Kwekerijen"
+                                            className="h-full w-full object-contain"
                                             onError={(e) => { (e.target as HTMLImageElement).style.visibility = 'hidden' }}
                                         />
                                     </div>

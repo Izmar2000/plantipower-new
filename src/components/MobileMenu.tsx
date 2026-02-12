@@ -82,7 +82,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                         onClick={onClose}
                         className={`flex items-center justify-between p-5 rounded-xl border ${isActive('/products/all12') ? 'bg-lime-500/10 border-lime-500/30 text-lime-400' : 'bg-white/5 border-white/5 text-white active:bg-white/10'}`}
                     >
-                        <span className="text-xl font-bold uppercase tracking-widest">All12</span>
+                        <span className="text-xl font-bold uppercase tracking-widest">{t?.all12 || "PlantiPower All12"}</span>
                         <ChevronRight className="w-5 h-5 opacity-30" />
                     </Link>
                     <Link
@@ -90,7 +90,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                         onClick={onClose}
                         className={`flex items-center justify-between p-5 rounded-xl border ${isActive('/products/shield') ? 'bg-blue-900/20 border-blue-500/30 text-blue-400' : 'bg-white/5 border-white/5 text-white active:bg-white/10'}`}
                     >
-                        <span className="text-xl font-bold uppercase tracking-widest">Shield</span>
+                        <span className="text-xl font-bold uppercase tracking-widest">{t?.shield || "PlantiPower Shield"}</span>
                         <ChevronRight className="w-5 h-5 opacity-30" />
                     </Link>
                 </div>
