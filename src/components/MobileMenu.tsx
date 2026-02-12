@@ -15,6 +15,7 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, dict, lang }) => {
+    const id = React.useId();
     const pathname = usePathname();
     const t = dict.Header;
     const isNL = lang === 'nl';

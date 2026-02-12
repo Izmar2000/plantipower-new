@@ -21,9 +21,19 @@ export default function ClientLayout({
     const pathname = usePathname()
 
     useEffect(() => {
-        window.scrollTo(0, 0)
         setIsMobileMenuOpen(false)
     }, [pathname])
+
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = ''
+        }
+        return () => {
+            document.body.style.overflow = ''
+        }
+    }, [isMobileMenuOpen])
 
     return (
         <>
