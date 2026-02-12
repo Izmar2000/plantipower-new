@@ -1,0 +1,260 @@
+{
+    "Header": {
+        "home": "Home",
+        "about": "About",
+        "products": "Products",
+        "faq": "FAQ",
+        "contact": "Contact",
+        "cta": "Request Sample",
+        "all12": "PlantiPower All12",
+        "all12Desc": "Optimize uptake",
+        "shield": "PlantiPower Shield",
+        "shieldDesc": "Maximum resilience"
+    },
+    "Hero": {
+        "titleLine1": "BETTER UPTAKE",
+        "titleLine2": "STRONGER ROOTS",
+        "titleLine3": "HIGHER YIELDS",
+        "uspsPart1": "HIGHER YIELDS",
+        "uspsPart2": "STRONGER ROOTS",
+        "uspsPart3": "100% NATURAL",
+        "description": "Part of the nutrition you apply always remains in the soil or substrate. Result: the plant doesn't use its full potential.<br /><br />PlantiPower ALL12 transports all 12 essential nutrients to the root, making the plant more vital and growing more efficiently.",
+        "ctaMore": "More about",
+        "ctaProduct": "PlantiPower ALL12",
+        "ctaView": "View",
+        "ctaCases": "Case Studies"
+    },
+    "GrowerFocus": {
+        "badge": "THE PHILOSOPHY",
+        "title": "We change nothing.",
+        "titleAccent": "You optimise everything.",
+        "description": "Your nutrition schedule is the foundation of your success. PlantiPower is developed to strengthen this foundation, not replace it. We provide the technological support for stable uptake and consistent results, in every phase of cultivation.",
+        "usps": [
+            {
+                "title": "Your schedule remains leading",
+                "desc": "No adjustments needed in EC or pH. PlantiPower integrates seamlessly."
+            },
+            {
+                "title": "Immediately visible result",
+                "desc": "Better uptake means an immediately more vital and resilient crop."
+            },
+            {
+                "title": "Keep doing what you're good at",
+                "desc": "PlantiPower does the rest in the background."
+            }
+        ],
+        "cta": "Request Sample"
+    },
+    "CropResults": {
+        "badge": "The Result",
+        "title": "Validated",
+        "titleHighlight": "practical results.",
+        "description": "From tomato to cucumber cultivation: PlantiPower maximizes absorption capacity in every professional setting.",
+        "crops": [
+            {
+                "name": "Tomato Cultivation",
+                "stats_0_title": "Fruit Quality",
+                "stats_0_desc": "Consistent weight and higher brix value.",
+                "stats_1_title": "Efficient Uptake",
+                "stats_1_desc": "Less waste of fertilizers."
+            },
+            {
+                "name": "Cucumber Cultivation",
+                "stats_0_badgeLabel": "+2",
+                "stats_0_title": "+2 cucumbers / m²",
+                "stats_0_desc": "Gain at Van Gog nurseries.",
+                "stats_1_title": "Harvest 1 day earlier",
+                "stats_1_desc": "Faster cycle due to transport efficiency."
+            }
+        ]
+    },
+    "GlobalStandard": {
+        "badge": "Industry Excellence",
+        "title": "Dutch quality.",
+        "titleHighlight": "Global impact.",
+        "desc": "Started in the agricultural heart of Venlo, the Netherlands, now a leading solution for professional growers worldwide.",
+        "dutchMade": "100% Dutch Made",
+        "premiumQuality": "Premium Quality",
+        "exportReady": "Export Ready",
+        "logistics": "Worldwide Logistics"
+    },
+    "Testimonials": {
+        "title": "Grower Experiences",
+        "average": "AVERAGE",
+        "reviews": [
+            {
+                "name": "Tomato Grower",
+                "role": "The Netherlands",
+                "text": "Since adding PlantiPower to our schedule, we see a clear difference: stronger plants, fuller blooms, and a shorter growth cycle. All without extra additives."
+            },
+            {
+                "name": "Herb Grower",
+                "role": "Organic Cultivation",
+                "text": "What appeals to me is that PlantiPower doesn't just give results, it truly strengthens the plant. Less loss, better absorption, and 100% natural. Exactly what the sector needs."
+            }
+        ]
+    },
+    "ProblemSection": {
+        "badge": "THE CHALLENGE",
+        "title": "The problem in",
+        "titleAccent": "practice.",
+        "description": "In a perfect world, every gram of nutrition you provide is actually absorbed by the plant. The reality is different. Factors such as pH fluctuations, cold water, or imbalance in the root zone often cause blockages.",
+        "quote": "\"This causes unused nutrients to remain in the substrate - a waste of investment and a burden on the crop.\"",
+        "closing": "By removing these 'blockers' with PlantiPower, you get the most out of your existing schedule."
+    },
+    "About": {
+        "metaTitle": "About Us | PlantiPower",
+        "metaDesc": "PlantiPower originated from practice. We develop natural solutions that support plants in their natural processes.",
+        "heroBadge": "Born from experience",
+        "heroTitle": "GROWERS LEADING.",
+        "heroTitleAccent": "SCIENCE SUPPORTING.",
+        "heroDesc": "PlantiPower is developed with science, but always originates from the experience of growers. Only what works for plant and grower stands the test of time.",
+        "visionBadge": "Our Vision",
+        "visionTitle": "What we stand",
+        "visionTitleAccent": "for.",
+        "visionDesc": "Healthy growth starts with balance. We support the natural processes of the plant without forcing them.",
+        "coreTitle": "The Core",
+        "coreDesc": "We believe that healthy growth starts with balance. Not by forcing growth, but by supporting processes that already take place in the plant.",
+        "approachTitle": "The Approach",
+        "approachDesc": "We develop products that support plants in their natural processes. By dealing more smartly with what is already present, our solutions contribute to uniform growth and a better functioning cultivation system.",
+        "values": [
+            {
+                "title": "Balance",
+                "desc": "Supporting natural processes.",
+                "icon": "Leaf"
+            },
+            {
+                "title": "Uniform",
+                "desc": "Stable growth throughout the season.",
+                "icon": "Zap"
+            },
+            {
+                "title": "Efficient",
+                "desc": "Smarter handling of available input.",
+                "icon": "Target"
+            },
+            {
+                "title": "Resilience",
+                "desc": "Respect for plant, soil and environment.",
+                "icon": "ShieldCheck"
+            }
+        ],
+        "whoWeAreTitle": "Who we stand",
+        "whoWeAreAccent": "for.",
+        "whoWeAreDesc": "\"Our products are developed for professional growers focused on quality, stability and efficiency. Growers who build for the long term.\"",
+        "productionBadge": "Developed in the Netherlands",
+        "productionTitle": "Developed and produced in the Netherlands",
+        "productionDesc": "PlantiPower is developed and produced in close cooperation with growers and agricultural specialists. Products are tested under realistic conditions and refined based on practical experience.",
+        "productionPoints": [
+            "Practically applicable in daily cultivation",
+            "Can be combined with existing schedules",
+            "Suitable for different substrates",
+            "100% natural composition"
+        ],
+        "missionTitle": "Our Mission",
+        "missionDesc": "\"To develop natural, practical solutions that help growers make their cultivation more stable, efficient and future-proof.\""
+    },
+    "Contact": {
+        "title": "Get in touch",
+        "titleAccent": "today",
+        "desc": "Do you want to optimize your cultivation and get more yield from your crops? Request a sample or contact us for personalized advice.",
+        "labelName": "Name",
+        "labelCompany": "Company",
+        "labelEmail": "E-mail",
+        "labelMessage": "Message",
+        "btnSend": "Send Request",
+        "sending": "Sending...",
+        "successTitle": "Message Sent!",
+        "successMsg": "Thanks for your message. We will contact you as soon as possible.",
+        "newMsg": "Send new message",
+        "subject": "New Contact Message",
+        "metaTitle": "Contact | PlantiPower",
+        "metaDesc": "Contact PlantiPower for questions, advice, or partnerships.",
+        "heroTitle": "Get in touch",
+        "heroTitleAccent": "with us"
+    },
+    "ContactPage": {
+        "title": "Get in",
+        "titleAccent": "touch",
+        "description": "Do you have questions about our products or want to become a partner? We are here for you.",
+        "metaTitle": "Contact | PlantiPower",
+        "metaDesc": "Contact PlantiPower. Questions about products, partnerships or distribution? We are happy to help."
+    },
+    "FAQ": {
+        "title": "FREQUENTLY ASKED",
+        "titleAccent": " QUESTIONS",
+        "metaTitle": "Frequently Asked Questions | PlantiPower",
+        "metaDesc": "Frequently asked questions about PlantiPower biostimulants, usage, and partnership opportunities.",
+        "items": [
+            {
+                "q": "What is PlantiPower?",
+                "a": "PlantiPower is a natural nutrient transporter that delivers fertilizers directly to plant roots. It helps plants absorb nutrients more efficiently, resulting in stronger growth, higher yield, and better soil health."
+            },
+            {
+                "q": "How often should I apply PlantiPower?",
+                "a": "For optimal results, we recommend monthly application. Consult product information for specific dosages per crop."
+            },
+            {
+                "q": "Is PlantiPower a fertilizer?",
+                "a": "No, it's a biostimulant that enhances existing fertilizers."
+            },
+            {
+                "q": "Can I use it with other fertilizers?",
+                "a": "Yes, it works synergistically with all standard programs."
+            },
+            {
+                "q": "How does PlantiPower work?",
+                "a": "It improves root absorption capacity and facilitates mineral transport."
+            },
+            {
+                "q": "What packaging sizes are available?",
+                "a": "Available in 1L, 5L, and 10L sizes."
+            },
+            {
+                "q": "Which crops is PlantiPower suitable for?",
+                "a": "Suitable for vegetables, fruits, ornamentals, and trees."
+            },
+            {
+                "q": "Is PlantiPower safe for all plants?",
+                "a": "Yes, when used as directed it is safe for all plants."
+            },
+            {
+                "q": "What are the benefits?",
+                "a": "Higher yield, better quality, efficient fertilizer use."
+            },
+            {
+                "q": "Can I use it in hydroponics?",
+                "a": "Yes, excellent for hydroponics and substrates."
+            },
+            {
+                "q": "Is it organic and sustainable?",
+                "a": "Yes, contributes to sustainability by reducing leaching."
+            },
+            {
+                "q": "What makes it unique?",
+                "a": "The ALL12 technology improving fundamental absorption capacity."
+            },
+            {
+                "q": "How do I use it?",
+                "a": "Mix with water and apply via irrigation system."
+            }
+        ]
+    },
+    "Footer": {
+        "desc": "Started in the agricultural heart of Venlo, the Netherlands, now a leading solution for professional growers worldwide.",
+        "links": {
+            "home": "Home",
+            "about": "About",
+            "products": "Products",
+            "faq": "FAQ",
+            "contact": "Contact"
+        },
+        "contactTitle": "Contact",
+        "rights": "All rights reserved",
+        "address": {
+            "line1": "L.J. Costerstraat 48",
+            "line2": "5916 PS Venlo",
+            "country": "The Netherlands"
+        }
+    }
+}

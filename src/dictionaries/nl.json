@@ -1,0 +1,260 @@
+{
+    "Header": {
+        "home": "Home",
+        "about": "Over ons",
+        "products": "Producten",
+        "faq": "FAQ",
+        "contact": "Contact",
+        "cta": "Vraag Sample Aan",
+        "all12": "PlantiPower All12",
+        "all12Desc": "Optimaliseer de opname",
+        "shield": "PlantiPower Shield",
+        "shieldDesc": "Maximale weerbaarheid"
+    },
+    "Hero": {
+        "titleLine1": "MEER OPNAME",
+        "titleLine2": "STERKERE WORTELS",
+        "titleLine3": "HOGERE OPBRENGST",
+        "uspsPart1": "HOGERE OPBRENGST",
+        "uspsPart2": "STERKERE WORTELS",
+        "uspsPart3": "100% NATUURLIJK",
+        "description": "Een deel van de voeding die je toedient blijft altijd achter in de bodem of substraat. Gevolg: de plant benut zijn volledige potentie niet.<br /><br />PlantiPower ALL12 transporteert alle 12 essentiële nutriënten naar de wortel, waardoor de plant vitaler is en efficiënter groeit.",
+        "ctaMore": "Meer over",
+        "ctaProduct": "PlantiPower ALL12",
+        "ctaView": "Bekijk",
+        "ctaCases": "Praktijkcases"
+    },
+    "GrowerFocus": {
+        "badge": "DE FILOSOFIE",
+        "title": "Wij veranderen niets.",
+        "titleAccent": "Jij optimaliseert alles.",
+        "description": "Jouw voedingsschema is het fundament van jouw succes. PlantiPower is ontwikkeld om dit fundament te versterken, niet te vervangen. Wij bieden de technologische ondersteuning voor stabiele opname en consistente resultaten, in elke fase van de teelt.",
+        "usps": [
+            {
+                "title": "Jouw schema blijft leidend",
+                "desc": "Geen aanpassingen nodig in EC of pH. PlantiPower integreert naadloos."
+            },
+            {
+                "title": "Direct zichtbaar resultaat",
+                "desc": "Betere opname betekent direct een vitaler en meer weerbaar gewas."
+            },
+            {
+                "title": "Blijf doen waar je goed in bent",
+                "desc": "PlantiPower doet de rest op de achtergrond."
+            }
+        ],
+        "cta": "Vraag Sample Aan"
+    },
+    "CropResults": {
+        "badge": "Het Resultaat",
+        "title": "Gevalideerde",
+        "titleHighlight": "praktijkresultaten.",
+        "description": "Van tomatenteelt tot komkommerteelt: PlantiPower maximaliseert de opnamecapaciteit in elke professionele setting.",
+        "crops": [
+            {
+                "name": "Tomatenteelt",
+                "stats_0_title": "Vruchtkwaliteit",
+                "stats_0_desc": "Consistent gewicht en hogere brix-waarde.",
+                "stats_1_title": "Efficiënte opname",
+                "stats_1_desc": "Minder verspilling van meststoffen."
+            },
+            {
+                "name": "Komkommerteelt",
+                "stats_0_badgeLabel": "+2",
+                "stats_0_title": "+2 komkommers / m²",
+                "stats_0_desc": "Winst bij van Gog kwekerijen.",
+                "stats_1_title": "1 dag eerder oogsten",
+                "stats_1_desc": "Snellere cyclus door transportefficiëntie."
+            }
+        ]
+    },
+    "GlobalStandard": {
+        "badge": "Industriële Uitmuntendheid",
+        "title": "Nederlandse kwaliteit.",
+        "titleHighlight": "Wereldwijde impact.",
+        "desc": "Begonnen in het agrarische hart van Venlo, Nederland, uitgegroeid tot een oplossing voor professionele telers wereldwijd.",
+        "dutchMade": "100% Nederlands Fabricaat",
+        "premiumQuality": "Premium Kwaliteit",
+        "exportReady": "Klaar voor Export",
+        "logistics": "Wereldwijde Logistiek"
+    },
+    "Testimonials": {
+        "title": "De Ervaring van Kwekers",
+        "average": "GEMIDDELD",
+        "reviews": [
+            {
+                "name": "Tomatenkweker",
+                "role": "Noord-Brabant",
+                "text": "Sinds we PlantiPower toevoegen aan ons schema, zien we een duidelijk verschil: sterkere planten, vollere bloei en een kortere groeicyclus. En dat zonder extra toevoegingen."
+            },
+            {
+                "name": "Kruidenkweker",
+                "role": "Biologische Teelt",
+                "text": "Wat mij aanspreekt is dat PlantiPower niet alleen resultaat geeft, maar de plant echt versterkt. Minder uitval, betere opname en 100% natuurlijk. Precies wat de sector nodig heeft."
+            }
+        ]
+    },
+    "ProblemSection": {
+        "badge": "DE UITDAGING",
+        "title": "Het probleem in",
+        "titleAccent": "de praktijk.",
+        "description": "In een perfecte wereld wordt elke gram voeding die je geeft, ook daadwerkelijk door de plant opgenomen. De realiteit is anders. Factoren zoals pH-schommelingen, koud water of een onbalans in de wortelzone zorgen vaak voor blokkades.",
+        "quote": "\"Dit zorgt voor ongebruikte voedingsstoffen die achterblijven in het substraat - zonde van de investering en belastend voor het gewas.\"",
+        "closing": "Door deze 'blockers' weg te nemen met PlantiPower, haal je het maximale uit je bestaande schema."
+    },
+    "About": {
+        "metaTitle": "Over Ons | PlantiPower",
+        "metaDesc": "PlantiPower is ontstaan vanuit de praktijk. Wij ontwikkelen natuurlijke oplossingen die planten ondersteunen in hun natuurlijke processen.",
+        "heroBadge": "Ontstaan vanuit de praktijk",
+        "heroTitle": "TELERS LEIDEND.",
+        "heroTitleAccent": "WETENSCHAP ONDERSTEUNEND.",
+        "heroDesc": "PlantiPower wordt ontwikkeld met wetenschap, maar ontstaat altijd vanuit de praktijk van telers. Alleen wat werkt voor plant en teler, blijft overeind.",
+        "visionBadge": "Onze Visie",
+        "visionTitle": "Waar wij voor",
+        "visionTitleAccent": "staan.",
+        "visionDesc": "Gezonde groei begint bij balans. We ondersteunen de natuurlijke processen van de plant zonder deze te forceren.",
+        "coreTitle": "De Kern",
+        "coreDesc": "Wij geloven dat gezonde groei begint bij balans. Niet bij het forceren van groei, maar bij het ondersteunen van processen die al in de plant plaatsvinden.",
+        "approachTitle": "De Aanpak",
+        "approachDesc": "Wij ontwikkelen producten die planten ondersteunen in hun natuurlijke processen. Door slimmer om te gaan met wat al aanwezig is, dragen onze oplossingen bij aan een gelijkmatige groei en een beter functionerend teeltsysteem.",
+        "values": [
+            {
+                "title": "Balans",
+                "desc": "Ondersteunen van natuurlijke processen.",
+                "icon": "Leaf"
+            },
+            {
+                "title": "Gelijkmatig",
+                "desc": "Stabiele groei door het hele seizoen.",
+                "icon": "Zap"
+            },
+            {
+                "title": "Efficiënt",
+                "desc": "Slimmer omgaan met beschikbare input.",
+                "icon": "Target"
+            },
+            {
+                "title": "Weerbaarheid",
+                "desc": "Respect voor plant, bodem en omgeving.",
+                "icon": "ShieldCheck"
+            }
+        ],
+        "whoWeAreTitle": "Voor wie wij",
+        "whoWeAreAccent": "staan.",
+        "whoWeAreDesc": "\"Onze producten zijn ontwikkeld voor professionele telers gericht op kwaliteit, stabiliteit en efficiëntie. Telers die bouwen aan de lange termijn.\"",
+        "productionBadge": "Ontwikkeld in Nederland",
+        "productionTitle": "Ontwikkeld en geproduceerd in Nederland",
+        "productionDesc": "PlantiPower wordt ontwikkeld en geproduceerd in nauwe samenwerking met telers en agrarische specialisten. Producten worden getest onder realistische omstandigheden en aangescherpt op basis van praktijkervaring.",
+        "productionPoints": [
+            "Praktisch toepasbaar in de dagelijkse teelt",
+            "Combineerbaar met bestaande schema’s",
+            "Geschikt voor verschillende substraten",
+            "100% natuurlijk samengesteld"
+        ],
+        "missionTitle": "Onze missie",
+        "missionDesc": "\"Het ontwikkelen van natuurlijke, praktische oplossingen die telers helpen om hun teelt stabieler, efficiënter en toekomstbestendig te maken.\""
+    },
+    "Contact": {
+        "title": "Neem contact op",
+        "titleAccent": "vandaag nog",
+        "desc": "Wilt u uw teelt optimaliseren en meer rendement uit uw gewassen halen? Vraag een monster aan of neem contact met ons op voor persoonlijk advies.",
+        "labelName": "Naam",
+        "labelCompany": "Bedrijf",
+        "labelEmail": "E-mail",
+        "labelMessage": "Bericht",
+        "btnSend": "Aanvraag Verzenden",
+        "sending": "Verzenden...",
+        "successTitle": "Bericht Verzonden!",
+        "successMsg": "Bedankt voor uw bericht. We nemen zo snel mogelijk contact met u op.",
+        "newMsg": "Nieuw bericht sturen",
+        "subject": "Nieuw Contactbericht",
+        "metaTitle": "Contact | PlantiPower",
+        "metaDesc": "Neem contact op met PlantiPower voor vragen, advies of samenwerkingen.",
+        "heroTitle": "Neem contact op",
+        "heroTitleAccent": "met ons"
+    },
+    "ContactPage": {
+        "title": "Neem",
+        "titleAccent": "contact op",
+        "description": "Heeft u vragen over onze producten of wilt u partner worden? Wij staan voor u klaar.",
+        "metaTitle": "Contact | PlantiPower",
+        "metaDesc": "Neem contact op met PlantiPower. Vragen over producten, partnerships of distributie? Wij helpen u graag."
+    },
+    "FAQ": {
+        "title": "VEELGESTELDE",
+        "titleAccent": " VRAGEN",
+        "metaTitle": "Veelgestelde Vragen | PlantiPower",
+        "metaDesc": "Veelgestelde vragen over PlantiPower biostimulanten.",
+        "items": [
+            {
+                "q": "Wat is PlantiPower?",
+                "a": "PlantiPower is een natuurlijke nutriënt-transporteur die meststoffen direct naar de plantwortels levert. Het helpt planten om voedingsstoffen efficiënter op te nemen, wat resulteert in sterkere groei, een hogere opbrengst en een betere bodemgezondheid."
+            },
+            {
+                "q": "Hoe vaak moet ik PlantiPower toepassen?",
+                "a": "Voor optimale resultaten adviseren wij een maandelijkse toepassing. Raadpleeg de productinformatie voor specifieke doseringen per gewas."
+            },
+            {
+                "q": "Is PlantiPower een meststof?",
+                "a": "Nee, PlantiPower is geen meststof maar een biostimulant en transportmiddel dat de werking van uw bestaande meststoffen versterkt."
+            },
+            {
+                "q": "Kan ik het gebruiken met andere meststoffen?",
+                "a": "Ja, PlantiPower is ontworpen om synergetisch te werken met alle reguliere mestprogramma's en verbetert de opname daarvan."
+            },
+            {
+                "q": "Hoe werkt PlantiPower?",
+                "a": "Het verbetert de opnamecapaciteit van de wortels en faciliteert het transport van mineralen in de plant, waardoor de plant minder energie verliest aan opname."
+            },
+            {
+                "q": "Welke verpakkingsgroottes zijn er?",
+                "a": "PlantiPower is beschikbaar in diverse formaten, waaronder 1L, 5L en 10L jerrycans, geschikt voor zowel kleine als grote kwekerijen."
+            },
+            {
+                "q": "Voor welke gewassen is PlantiPower geschikt?",
+                "a": "Het is effectief voor een breed scala aan gewassen, waaronder groenten (tomaat, komkommer), fruit, sierteelt en boomkwekerij."
+            },
+            {
+                "q": "Is PlantiPower veilig voor alle planten?",
+                "a": "Ja, bij correct gebruik volgens de voorschriften is het veilig voor alle planten en ondersteunt het de natuurlijke groeiprocessen."
+            },
+            {
+                "q": "Wat zijn de voordelen van PlantiPower?",
+                "a": "Hogere opbrengst, betere vruchtkwaliteit (o.a. brix-waarde), efficiënter meststofgebruik en een vitaler gewas."
+            },
+            {
+                "q": "Kan ik het gebruiken in hydrocultuur?",
+                "a": "Absoluut, PlantiPower is uitstekend geschikt voor hydrocultuur en andere substraatsystemen."
+            },
+            {
+                "q": "Is PlantiPower biologisch en duurzaam?",
+                "a": "Ja, het draagt bij aan duurzame teelt door de efficiëntie van meststoffen te verhogen, waardoor er minder uitspoeling plaatsvindt."
+            },
+            {
+                "q": "Wat maakt PlantiPower uniek?",
+                "a": "De unieke ALL12 technologie die niet alleen voedt, maar de opnamecapaciteit van de plant zelf fundamenteel verbetert."
+            },
+            {
+                "q": "Hoe gebruik ik PlantiPower?",
+                "a": "Meng de geadviseerde hoeveelheid met water en dien toe via uw reguliere bewateringssysteem. Zie de verpakking voor exacte instructies."
+            }
+        ]
+    },
+    "Footer": {
+        "desc": "Begonnen in het agrarische hart van Venlo, Nederland, uitgegroeid tot een oplossing voor professionele telers wereldwijd.",
+        "links": {
+            "home": "Home",
+            "about": "Over ons",
+            "products": "Producten",
+            "faq": "Veelgestelde vragen",
+            "contact": "Contact"
+        },
+        "contactTitle": "Contact",
+        "rights": "Alle rechten voorbehouden",
+        "address": {
+            "line1": "L.J. Costerstraat 48",
+            "line2": "5916 PS Venlo",
+            "country": "Nederland"
+        }
+    }
+}
