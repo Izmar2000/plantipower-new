@@ -50,7 +50,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                         </div>
 
                         {/* Links */}
-                        <nav className="flex-1 flex flex-col justify-start pt-8 px-8 gap-6 pb-8">
+                        <nav className="flex-1 flex flex-col justify-start pt-12 px-8 gap-8 pb-12">
                             <Link
                                 href={getPath('/')}
                                 onClick={onClose}
@@ -66,8 +66,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, onOpenSample, di
                                 {t?.about || "ABOUT"}
                             </Link>
 
-                            <div className="flex flex-col gap-3 py-2 border-l-2 border-white/5 pl-6">
-                                <span className="text-emerald-100/30 text-[10px] font-bold uppercase tracking-[0.4em] mb-2">{t?.products || "PRODUCTS"}</span>
+                            <div className="flex flex-col gap-4 py-2 border-l border-white/10 pl-6">
+                                <span className="text-white/30 text-xs font-black uppercase tracking-[0.4em] mb-2">{t?.products || "PRODUCTS"}</span>
                                 <Link
                                     href={getPath('/products/all12')}
                                     onClick={onClose}
