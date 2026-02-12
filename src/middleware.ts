@@ -25,12 +25,12 @@ function getLocale(request: NextRequest): string | undefined {
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname
 
-    // Check if there is any supported locale in the pathname
+    // Check of de URL een taal bevat (nl of en)
     const pathnameIsMissingLocale = i18n.locales.every(
         (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
     )
 
-    // Redirect if there is no locale
+    // Alleen doorsturen naar /nl of /en als de locale mist
     if (pathnameIsMissingLocale) {
         const locale = getLocale(request)
 
@@ -44,6 +44,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-    // Deze matcher negeert alle systeembestanden EN al jouw belangrijke mappen met afbeeldingen/documenten
-    matcher: ['/((?!api|_next/static|_next/image|favicon.ico|images|docs|PP Shield info|assets).*)'],
+    // Matcher negeert systeembestanden en mappen met spaties in bestandsnamen
+    matcher: ['/((?!api|_next/static|_next/image|favicon.ico|images|docs|PP Shield info|assets|van gog logo .png).*)'],
 }
