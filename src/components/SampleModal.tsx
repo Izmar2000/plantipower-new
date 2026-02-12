@@ -250,10 +250,9 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
               </div>
             </form>
           </div>
-          </div>
         )}
+      </div>
     </div>
-    </div >
   );
 };
 
