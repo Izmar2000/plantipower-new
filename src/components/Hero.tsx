@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ dict, lang }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Left Column: Text Content */}
-          <div className="relative z-50 flex flex-col justify-center text-center lg:text-left pt-4 lg:pt-0 lg:-mt-14">
+          <div className="relative z-50 flex flex-col justify-center text-left pt-4 lg:pt-0 lg:-mt-14">
             <h1 className="font-outfit font-bold uppercase text-5xl sm:text-5xl lg:text-4xl xl:text-6xl 2xl:text-7xl tracking-[0.04em] leading-[1.02] text-left mb-8 md:mb-10 break-words">
               <span className="text-emerald-400 block">{t.titleLine1}</span>
               <span className="text-white block">{t.titleLine2}</span>
@@ -43,14 +43,14 @@ const Hero: React.FC<HeroProps> = ({ dict, lang }) => {
             </div>
 
             {/* Styled Description Paragraph */}
-            <div className="relative py-2 text-left mb-12 max-w-xl mx-auto lg:mx-0">
+            <div className="relative py-2 text-left mb-12 max-w-xl lg:mx-0">
               <p
                 className="text-lg text-emerald-100/80 leading-relaxed font-medium"
                 dangerouslySetInnerHTML={{ __html: t.description }}
               />
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-start">
               <Link
                 href={`/${lang}/products/all12`}
                 className="btn-standard bg-lime-500 hover:bg-lime-400 text-emerald-950 shadow-[0_0_30px_rgba(132,204,22,0.4)] flex-col py-4 leading-tight !h-auto text-center"
