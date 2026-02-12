@@ -35,7 +35,7 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
     product1: {
       name: "PlantiPower All12 (1L)",
       sub: isNL ? "VOEDING TRANSPORTEREN" : "TRANSPORT NUTRIENTS",
-      img: "https://plantipower.com/assets/product-all12.png" // Placeholder or actual path if known, using generic for now, will replace with verified asset path if available or keep generic structure.
+      img: "https://plantipower.com/assets/product-all12.png"
     },
     product2: {
       name: "PlantiPower Shield (60ml)",
@@ -108,10 +108,6 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
     }, 1000);
   };
 
-  import { X, Check, ChevronDown, FlaskConical, ShieldCheck } from 'lucide-react';
-  // ... imports
-
-  // ... inside component
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center md:p-4 p-0">
       <div className="absolute inset-0 bg-[#011a14]/90 backdrop-blur-sm transition-opacity" onClick={onClose} />
@@ -126,14 +122,27 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
         </div>
 
         {isSuccess ? (
-          // ... success state
-          <div className="p-20 text-center flex flex-col items-center justify-center h-full"> ... </div>
+          <div className="p-20 text-center flex flex-col items-center justify-center h-full">
+            <div className="w-16 h-16 bg-lime-500 rounded-full flex items-center justify-center mb-6">
+              <Check className="w-8 h-8 text-[#011410]" />
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4">{content.thankYou}</h2>
+            <p className="text-white/70">{content.successMsg}</p>
+          </div>
         ) : (
           <div className="overflow-y-auto custom-scrollbar pt-16 md:pt-10 pb-8 px-6 md:px-10">
 
             {/* Header */}
             <div className="mb-6 md:mb-8">
-              {/* ... title ... */}
+              <div className="inline-block px-3 py-1 rounded-md bg-[#0d2b24] border border-lime-500/30 text-lime-500 text-xs font-bold uppercase tracking-wider mb-4">
+                {isNL ? "Proefpakket" : "Sample Pack"}
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-tight mb-3">
+                {content.title}
+              </h2>
+              <p className="text-lg text-emerald-100/70 font-medium">
+                {content.subtitle}
+              </p>
             </div>
 
             {/* Product Selection Visuals */}
@@ -171,7 +180,6 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
 
             {/* Total Price Block */}
             <div className="bg-[#021814] rounded-2xl p-4 md:p-6 border border-white/5 flex items-center justify-between mb-8">
-              {/* ... content ... */}
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#0d2b24] flex items-center justify-center text-lime-500 shrink-0">
                   <Check className="w-5 h-5 md:w-6 md:h-6" />
@@ -186,7 +194,6 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
                 <div className="text-[10px] text-emerald-100/40 font-bold uppercase tracking-wider">{content.shipping}</div>
               </div>
             </div>
-
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-x-6 gap-y-6">
