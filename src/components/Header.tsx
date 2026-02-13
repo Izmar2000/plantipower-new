@@ -14,7 +14,6 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ onOpenSample, onOpenMenu, dict, lang }) => {
   const pathname = usePathname();
-  console.log("PP_DEBUG_VERSION_2026_02_13_21_20");
   const isNL = lang === 'nl'; // Gebruik lang prop ipv pathname
 
   const isActive = (path: string) => {

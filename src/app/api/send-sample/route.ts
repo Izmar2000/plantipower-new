@@ -1,7 +1,7 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || 're_123');
 
 const emailStyles = {
   container: 'background-color: #011410; color: #ffffff; font-family: "Outfit", sans-serif; max-width: 600px; margin: 0 auto; padding: 0; border-radius: 40px; border: 1px solid rgba(255,255,255,0.05); overflow: hidden;',
