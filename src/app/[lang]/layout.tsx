@@ -46,7 +46,10 @@ export async function generateMetadata(
       },
     },
     icons: {
-      icon: '/planti-favicon.png',
+      icon: [
+        { url: '/planti-favicon.png' },
+        { url: '/favicon.ico' },
+      ],
       apple: '/planti-favicon.png',
     },
   }
