@@ -137,18 +137,18 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center md:p-4 p-0">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
       <div className="absolute inset-0 bg-[#011a14]/90 backdrop-blur-sm transition-opacity" onClick={onClose} />
 
-      <div className="relative w-full max-w-4xl bg-[#011410] md:rounded-[30px] rounded-t-[30px] shadow-2xl flex flex-col max-h-[90vh] md:max-h-[95vh] border border-[#0d2b24] mt-auto md:mt-0">
+      <div className="relative w-full max-w-2xl bg-[#011410] rounded-[30px] shadow-2xl flex flex-col max-h-[85vh] border border-[#0d2b24]">
 
         {/* Always Visible Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-[110] w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-xl border border-white/20 shadow-2xl transition-all active:scale-90"
+          className="absolute top-6 right-6 z-[110] w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white backdrop-blur-xl border border-white/10 transition-all active:scale-90"
           aria-label="Close"
         >
-          <X className="w-7 h-7" />
+          <X className="w-5 h-5" />
         </button>
 
         {isSuccess ? (
@@ -166,17 +166,17 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
             </button>
           </div>
         ) : (
-          <div className="overflow-y-auto custom-scrollbar pt-16 md:pt-10 pb-8 px-6 md:px-10">
+          <div className="overflow-y-auto custom-scrollbar pt-12 pb-10 px-6 md:px-12">
 
             {/* Header */}
-            <div className="mb-6 md:mb-8">
-              <div className="inline-block px-3 py-1 rounded-md bg-[#0d2b24] border border-lime-500/30 text-lime-500 text-xs font-bold uppercase tracking-wider mb-4">
+            <div className="mb-8">
+              <div className="inline-block px-3 py-1 rounded-md bg-[#0d2b24] border border-lime-500/30 text-lime-500 text-[10px] font-bold uppercase tracking-wider mb-4">
                 {isNL ? "Proefpakket" : "Sample Pack"}
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-tight mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tight mb-3">
                 {content.title}
               </h2>
-              <p className="text-lg text-emerald-100/70 font-medium">
+              <p className="text-base text-emerald-100/60 font-medium">
                 {content.subtitle}
               </p>
             </div>
@@ -215,19 +215,19 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Total Price Block */}
-            <div className="bg-[#021814] rounded-2xl p-4 md:p-6 border border-white/5 flex items-center justify-between mb-8">
+            <div className="bg-[#021814] rounded-xl p-4 md:p-5 border border-white/5 flex items-center justify-between mb-8">
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#0d2b24] flex items-center justify-center text-lime-500 shrink-0">
-                  <Check className="w-5 h-5 md:w-6 md:h-6" />
+                <div className="w-8 h-8 rounded-full bg-[#0d2b24] flex items-center justify-center text-lime-500 shrink-0">
+                  <Check className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-white font-bold uppercase tracking-wide text-sm md:text-base">{content.bundleTitle}</div>
-                  <div className="text-emerald-100/50 text-[10px] md:text-xs font-bold uppercase tracking-wider">{content.bundleSub}</div>
+                  <div className="text-white font-bold uppercase tracking-wide text-xs md:text-sm">{content.bundleTitle}</div>
+                  <div className="text-emerald-100/40 text-[9px] font-bold uppercase tracking-wider">{content.bundleSub}</div>
                 </div>
               </div>
               <div className="text-right whitespace-nowrap">
-                <div className="text-2xl md:text-3xl font-bold text-white tracking-tight">{content.price}</div>
-                <div className="text-[10px] text-emerald-100/40 font-bold uppercase tracking-wider">{content.shipping}</div>
+                <div className="text-xl md:text-2xl font-bold text-white tracking-tight">{content.price}</div>
+                <div className="text-[9px] text-emerald-100/30 font-bold uppercase tracking-wider">{content.shipping}</div>
               </div>
             </div>
 
