@@ -151,7 +151,7 @@ export default async function ProductAll12({
                         ))}
                     </div>
 
-                    <div className="max-w-6xl mx-auto px-6 relative z-10">
+                    <div className="max-w-7xl mx-auto px-6 relative z-10">
                         <div className="grid lg:grid-cols-2 gap-20 items-start">
                             <div className="animate-reveal">
                                 <div className="mb-8">
@@ -201,7 +201,7 @@ export default async function ProductAll12({
                 {/* CORE SYSTEM */}
                 <div className="py-24 bg-[#011410] relative overflow-hidden">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(163,230,53,0.03)_0%,transparent_70%)] pointer-events-none"></div>
-                    <div className="max-w-6xl mx-auto px-6 relative z-10">
+                    <div className="max-w-7xl mx-auto px-6 relative z-10">
                         <div className="mb-16 max-w-2xl">
                             <div className="text-lime-400 font-black text-[10px] uppercase tracking-[0.4em] mb-4">{content.coreSystem}</div>
                             <h2 className="section-title !text-4xl md:!text-5xl font-outfit">
@@ -229,7 +229,7 @@ export default async function ProductAll12({
 
                 {/* SPECTRUM & ADVANTAGE */}
                 <div className="relative py-20 border-y border-white/5 bg-[#011a14]">
-                    <div className="max-w-6xl mx-auto px-6 relative z-10">
+                    <div className="max-w-7xl mx-auto px-6 relative z-10">
                         {/* SPECTRUM SECTION */}
                         <div className="grid lg:grid-cols-2 gap-20 mb-32 items-center">
                             <div>
@@ -357,7 +357,7 @@ export default async function ProductAll12({
                 {isNL && (
                     <div className="py-24 bg-[#011a14] relative overflow-hidden">
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-lime-500/5 blur-[120px] rounded-full pointer-events-none"></div>
-                        <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
+                        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
                             <div className="max-w-3xl mx-auto mb-16">
                                 <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-outfit uppercase tracking-tight">
                                     {content.labelTitle}

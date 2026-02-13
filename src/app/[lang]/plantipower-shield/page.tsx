@@ -50,7 +50,7 @@ export default async function ProductShield({
             ? 'Verhoog de natuurlijke weerbaarheid van je gewas met PlantiPower Shield. Een geavanceerde barrière voor vitalere planten zonder residu.'
             : 'Increase the natural resilience of your crop with PlantiPower Shield. An advanced barrier for more vital plants without residue.',
         heroBadge: isNL ? 'Premium Beschermingssysteem' : 'Premium Protection System',
-        heroTitle: <><span className="text-white">SHIELD</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">INVISIBLE FORCE.</span></>,
+        heroTitle: <><span className="text-white">SHIELD</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 whitespace-nowrap">INVISIBLE FORCE.</span></>,
         heroDesc: isNL
             ? 'Deze hoogwaardige bladvoeding wordt rechtstreeks op bladeren, stengels, bloemen en vruchten aangebracht, waardoor nutriënten snel en efficiënt worden opgenomen precies daar waar de plant ze het hardst nodig heeft.'
             : 'This high-quality foliar feed is applied directly to leaves, stems, flowers, and fruits, allowing nutrients to be absorbed quickly and efficiently exactly where the plant needs them most.',
@@ -146,7 +146,7 @@ export default async function ProductShield({
                         ))}
                     </div>
 
-                    <div className="max-w-6xl mx-auto px-6 relative z-10">
+                    <div className="max-w-7xl mx-auto px-6 relative z-10">
                         <div className="grid lg:grid-cols-2 gap-20 items-start">
                             <div className="animate-reveal">
                                 {/* BADGE */}
@@ -199,7 +199,7 @@ export default async function ProductShield({
                 <div className="py-24 bg-[#000b1a] relative overflow-hidden">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.03)_0%,transparent_70%)] pointer-events-none"></div>
 
-                    <div className="max-w-6xl mx-auto px-6 relative z-10">
+                    <div className="max-w-7xl mx-auto px-6 relative z-10">
                         <div className="mb-16 max-w-2xl">
                             <div className="text-cyan-400 font-black text-[10px] uppercase tracking-[0.4em] mb-4">{content.coreSystem}</div>
                             <h2 className="section-title !text-4xl md:!text-5xl font-outfit">
@@ -229,7 +229,7 @@ export default async function ProductShield({
 
                 {/* ADVANTAGE / COMPOSITION SECTION */}
                 <div className="relative py-20 border-y border-white/5 bg-[#010816]">
-                    <div className="max-w-6xl mx-auto px-6 relative z-10">
+                    <div className="max-w-7xl mx-auto px-6 relative z-10">
                         <div className="grid lg:grid-cols-2 gap-24 items-start">
                             {/* Left: Advantage */}
                             <div>
@@ -333,7 +333,7 @@ export default async function ProductShield({
                 {isNL && (
                     <div className="py-24 bg-[#010816] relative overflow-hidden">
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none"></div>
-                        <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
+                        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
                             <div className="max-w-3xl mx-auto mb-16">
                                 <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-outfit uppercase tracking-tight">
                                     {content.labelTitle}
