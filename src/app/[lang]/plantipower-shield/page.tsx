@@ -49,7 +49,7 @@ export default async function ProductShield({
             ? 'Verhoog de natuurlijke weerbaarheid van je gewas met PlantiPower Shield. Een geavanceerde barrière voor vitalere planten zonder residu.'
             : 'Increase the natural resilience of your crop with PlantiPower Shield. An advanced barrier for more vital plants without residue.',
         heroBadge: isNL ? 'Premium Beschermingssysteem' : 'Premium Protection System',
-        heroTitle: <>SHIELD<span className="text-cyan-400">®</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">INVISIBLE FORCE.</span></>,
+        heroTitle: <><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">SHIELD</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">INVISIBLE FORCE.</span></>,
         heroDesc: isNL
             ? 'Deze hoogwaardige bladvoeding wordt rechtstreeks op bladeren, stengels, bloemen en vruchten aangebracht, waardoor nutriënten snel en efficiënt worden opgenomen precies daar waar de plant ze het hardst nodig heeft.'
             : 'This high-quality foliar feed is applied directly to leaves, stems, flowers, and fruits, allowing nutrients to be absorbed quickly and efficiently exactly where the plant needs them most.',
@@ -112,7 +112,9 @@ export default async function ProductShield({
             : 'Access to the official documentation and specifications of PlantiPower Shield.',
         sdsLabel: isNL ? 'Veiligheidsblad' : 'Safety Data Sheet',
         sdsMeta: isNL ? 'SDS NL • pdf' : 'SDS EN • pdf',
-        sdsLink: isNL ? '/docs/PlantiPower%20Shield%20SDS%20NL.pdf' : '/images/products/sds-shield.pdf'
+        sdsLink: isNL ? '/docs/PlantiPower%20Shield%20SDS%20NL.pdf' : '/images/products/sds-shield.pdf',
+        labelTitle: isNL ? 'Het Officiële Etiket' : 'Official Label',
+        labelImage: '/images/products/label-shield-nl.png'
     };
 
     return (
@@ -155,7 +157,7 @@ export default async function ProductShield({
 
                                 <div className="space-y-8">
                                     <div>
-                                        <h1 className="font-outfit font-bold uppercase text-[56px] md:text-[72px] lg:text-[84px] tracking-tight leading-[0.9] text-white text-left mb-6">
+                                        <h1 className="font-outfit font-bold uppercase text-[42px] md:text-[56px] lg:text-[68px] tracking-tight leading-[0.9] text-white text-left mb-6">
                                             {content.heroTitle}
                                         </h1>
                                         <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-xl font-light">
@@ -324,6 +326,34 @@ export default async function ProductShield({
                         </div>
                     </div>
                 </div>
+
+                {/* LABEL SPOTLIGHT */}
+                {isNL && (
+                    <div className="py-24 bg-[#010816] relative overflow-hidden">
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+                        <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
+                            <div className="max-w-3xl mx-auto mb-16">
+                                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-outfit uppercase tracking-tight">
+                                    {content.labelTitle}
+                                </h2>
+                                <p className="text-slate-400 text-lg font-light leading-relaxed">
+                                    Onze etiketten staan voor onzichtbare kracht, maximale weerbaarheid en 100% natuurlijke bescherming.
+                                </p>
+                            </div>
+
+                            <div className="relative group max-w-2xl mx-auto">
+                                <div className="absolute -inset-4 bg-cyan-500/20 blur-[40px] rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                <div className="relative glass-panel rounded-[2.5rem] p-4 bg-white/5 border-white/10 shadow-2xl overflow-hidden group-hover:scale-[1.02] transition-transform duration-700">
+                                    <img
+                                        src={content.labelImage}
+                                        alt="PlantiPower Shield NL Etiket"
+                                        className="w-full h-auto rounded-[1.5rem] shadow-inner"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
 
                 {/* DOWNLOADS */}
                 <div id="downloads" className="py-20 bg-[#010816] border-t border-white/5">

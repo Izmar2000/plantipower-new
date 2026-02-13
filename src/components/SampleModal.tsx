@@ -28,9 +28,9 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const content = {
-    title: isNL ? "BESTEL HIER UW PROEFPAKKET" : "ORDER YOUR SAMPLE PACK HERE",
+    title: isNL ? "BESTEL HIER JE PROEFPAKKET" : "ORDER YOUR SAMPLE PACK HERE",
     subtitle: isNL
-      ? "U ontvangt 1x 1 liter PlantiPower All12 en 1x 60ml PlantiPower Shield voor €29,95 inclusief verzendkosten."
+      ? "Je ontvangt 1x 1 liter PlantiPower All12 en 1x 60ml PlantiPower Shield voor €29,95 inclusief verzendkosten."
       : "You receive 1x 1 liter PlantiPower All12 and 1x 60ml PlantiPower Shield for €29.95 including shipping.",
     product1: {
       name: "PlantiPower All12 (1L)",
@@ -48,7 +48,7 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
     shipping: isNL ? "INCL. VERZENDKOSTEN" : "INCL. SHIPPING",
 
     labelCompany: isNL ? "BEDRIJFSNAAM" : "COMPANY NAME",
-    placeholderCompany: isNL ? "Uw Kwekerij" : "Your Nursery",
+    placeholderCompany: isNL ? "Je Kwekerij" : "Your Nursery",
 
     labelName: isNL ? "CONTACTPERSOON" : "CONTACT PERSON",
     placeholderName: isNL ? "Naam" : "Name",
@@ -69,7 +69,7 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
     placeholderCrop: isNL ? "Maak een keuze..." : "Make a choice...",
 
     labelComments: isNL ? "OPMERKINGEN OF SPECIFIEKE VRAGEN" : "COMMENTS OR SPECIFIC QUESTIONS",
-    placeholderComments: isNL ? "Heeft u specifieke uitdagingen?" : "Do you have specific challenges?",
+    placeholderComments: isNL ? "Heb je specifieke uitdagingen?" : "Do you have specific challenges?",
 
     cropChoices: isNL ? [
       { v: "groente", l: "Groenten" },
@@ -89,7 +89,7 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
     btnSubmit: isNL ? "Aanvragen" : "Request",
     footerNote: isNL ? "Factuur volgt na levering. Levertijd 1-2 werkdagen." : "Invoice follows delivery. Delivery 1-2 working days.",
     thankYou: isNL ? "Bedankt!" : "Thank You!",
-    successMsg: isNL ? "Uw aanvraag is succesvol verzonden." : "Your request has been successfully sent."
+    successMsg: isNL ? "Je aanvraag is succesvol verzonden." : "Your request has been successfully sent."
   };
 
   if (!isOpen) return null;
@@ -97,15 +97,43 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simplified submission logic
-    setTimeout(() => {
-      setIsSuccess(true);
+
+    try {
+      const response = await fetch('/api/send-sample', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        setTimeout(() => {
+          onClose();
+          setIsSuccess(false);
+          // Optional: reset form
+          setFormData({
+            ...formData,
+            company: '',
+            name: '',
+            email: '',
+            phone: '',
+            address: '',
+            city: '',
+            comments: ''
+          });
+        }, 3000);
+      } else {
+        const errorData = await response.json();
+        alert(isNL ? `Er is iets misgegaan: ${errorData.error}` : `Something went wrong: ${errorData.error}`);
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      alert(isNL ? 'Er is een fout opgetreden bij het verzenden.' : 'An error occurred while sending.');
+    } finally {
       setIsSubmitting(false);
-      setTimeout(() => {
-        onClose();
-        setIsSuccess(false);
-      }, 3000);
-    }, 1000);
+    }
   };
 
   return (

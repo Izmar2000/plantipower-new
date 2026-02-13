@@ -30,13 +30,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ dict, lang }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/mkgogwjw", {
+      const response = await fetch("/api/send-contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          _subject: `${t.subject}: ${formData.company || formData.name}`
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {

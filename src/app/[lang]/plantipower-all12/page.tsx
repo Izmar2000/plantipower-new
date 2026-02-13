@@ -49,7 +49,7 @@ export default async function ProductAll12({
         title: isNL ? 'PlantiPower All12 | Professionele Nutriënt Transport' : 'PlantiPower All12 | Professional Nutrient Transport',
         meta: isNL ? 'Ontdek PlantiPower All12 - de ultieme nutriënt transport technologie.' : 'Discover PlantiPower All12 - the ultimate nutrient transport technology.',
         heroBadge: isNL ? 'Biologische Innovatie' : 'Biological Innovation',
-        heroTitle: <>ALL12<span className="text-lime-500">®</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600">TRANSPORT TECH.</span></>,
+        heroTitle: <><span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600">ALL12</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600">TRANSPORT TECH.</span></>,
         heroDesc: isNL
             ? 'Doorbraak in passief transport. Waar fulvinezuren normaal stoppen bij 3 nutriënten, transporteert de ALL12® technologie het volledige spectrum.'
             : 'Breakthrough in passive transport. Where fulvic acids normally stop at 3 nutrients, ALL12® technology transports the full spectrum.',
@@ -119,7 +119,9 @@ export default async function ProductAll12({
             : 'Access to official documentation and specifications of PlantiPower All12.',
         sdsLabel: isNL ? 'Veiligheidsblad' : 'Safety Data Sheet',
         sdsMeta: isNL ? 'SDS NL • pdf' : 'SDS EN • pdf',
-        sdsLink: isNL ? '/docs/PlantiPower%20ALL12%20SDS%20NL.pdf' : '/images/products/sds-all12.pdf'
+        sdsLink: isNL ? '/docs/PlantiPower%20ALL12%20SDS%20NL.pdf' : '/images/products/sds-all12.pdf',
+        labelTitle: isNL ? 'Het Officiële Etiket' : 'Official Label',
+        labelImage: '/images/products/label-all12-nl.png'
     };
 
     return (
@@ -159,7 +161,7 @@ export default async function ProductAll12({
 
                                 <div className="space-y-8">
                                     <div>
-                                        <h1 className="font-outfit font-bold uppercase text-[56px] md:text-[72px] lg:text-[84px] tracking-tight leading-[0.9] text-white text-left mb-6">
+                                        <h1 className="font-outfit font-bold uppercase text-[42px] md:text-[56px] lg:text-[68px] tracking-tight leading-[0.9] text-white text-left mb-6">
                                             {content.heroTitle}
                                         </h1>
                                         <p className="text-lg md:text-xl text-emerald-100/60 leading-relaxed max-w-xl font-light">
@@ -348,6 +350,34 @@ export default async function ProductAll12({
                         </div>
                     </div>
                 </div>
+
+                {/* LABEL SPOTLIGHT */}
+                {isNL && (
+                    <div className="py-24 bg-[#011a14] relative overflow-hidden">
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-lime-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+                        <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
+                            <div className="max-w-3xl mx-auto mb-16">
+                                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-outfit uppercase tracking-tight">
+                                    {content.labelTitle}
+                                </h2>
+                                <p className="text-emerald-100/50 text-lg font-light leading-relaxed">
+                                    Onze etiketten weerspiegelen onze belofte: pure kwaliteit, krachtige groei en 100% biologisch.
+                                </p>
+                            </div>
+
+                            <div className="relative group max-w-2xl mx-auto">
+                                <div className="absolute -inset-4 bg-lime-500/20 blur-[40px] rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                <div className="relative glass-panel rounded-[2.5rem] p-4 bg-white/5 border-white/10 shadow-2xl overflow-hidden group-hover:scale-[1.02] transition-transform duration-700">
+                                    <img
+                                        src={content.labelImage}
+                                        alt="PlantiPower All12 NL Etiket"
+                                        className="w-full h-auto rounded-[1.5rem] shadow-inner"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
 
                 {/* DOWNLOADS */}
                 <div id="downloads" className="py-20 bg-[#011410] border-t border-white/5">
