@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Check, ChevronDown, FlaskConical, ShieldCheck } from 'lucide-react';
+import { X, Check, ChevronDown } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 interface SampleModalProps {
@@ -186,8 +186,12 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
               {/* Product 1: All12 */}
               <div className="relative bg-[#0d2b24]/50 rounded-2xl p-4 md:p-6 border-2 border-lime-500/50 flex items-center gap-4 overflow-hidden">
                 {/* Image / Icon */}
-                <div className="w-12 h-16 bg-white/5 rounded-md flex items-center justify-center flex-shrink-0">
-                  <FlaskConical className="w-8 h-8 text-lime-500/50" />
+                <div className="w-16 h-20 flex items-center justify-center flex-shrink-0">
+                  <img
+                    src="/images/products/plantipower-all12-transparant.png"
+                    alt="All12"
+                    className="w-full h-full object-contain filter drop-shadow-[0_5px_15px_rgba(132,204,22,0.3)]"
+                  />
                 </div>
                 <div className="flex-grow">
                   <div className="text-[10px] text-lime-500 font-bold uppercase tracking-wider mb-1">{content.product1.sub}</div>
@@ -201,8 +205,12 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
               {/* Product 2: Shield */}
               <div className="relative bg-[#0d2b24]/50 rounded-2xl p-4 md:p-6 border-2 border-cyan-500/50 flex items-center gap-4 overflow-hidden">
                 {/* Image / Icon */}
-                <div className="w-12 h-16 bg-white/5 rounded-md flex items-center justify-center flex-shrink-0">
-                  <ShieldCheck className="w-8 h-8 text-cyan-500/50" />
+                <div className="w-16 h-20 flex items-center justify-center flex-shrink-0">
+                  <img
+                    src="/images/products/plantipower-shield-transparant.png"
+                    alt="Shield"
+                    className="w-full h-full object-contain filter drop-shadow-[0_5px_15px_rgba(0,255,255,0.2)]"
+                  />
                 </div>
                 <div className="flex-grow">
                   <div className="text-[10px] text-cyan-400 font-bold uppercase tracking-wider mb-1">{content.product2.sub}</div>
