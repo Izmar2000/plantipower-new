@@ -137,10 +137,10 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
-      <div className="absolute inset-0 bg-[#011a14]/90 backdrop-blur-sm transition-opacity" onClick={onClose} />
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 md:p-12 overflow-y-auto">
+      <div className="absolute inset-0 bg-[#011a14]/95 backdrop-blur-md transition-opacity" onClick={onClose} />
 
-      <div className="relative w-full max-w-2xl bg-[#011410] rounded-[30px] shadow-2xl flex flex-col max-h-[85vh] border border-[#0d2b24]">
+      <div className="relative w-full max-w-2xl bg-[#011410] rounded-[30px] shadow-2xl flex flex-col max-h-[90vh] md:max-h-[85vh] border border-[#0d2b24] my-auto">
 
         {/* Always Visible Close Button */}
         <button
@@ -166,7 +166,7 @@ const SampleModal: React.FC<SampleModalProps> = ({ isOpen, onClose }) => {
             </button>
           </div>
         ) : (
-          <div className="overflow-y-auto custom-scrollbar pt-12 pb-10 px-6 md:px-12">
+          <div className="overflow-y-auto custom-scrollbar pt-20 pb-10 px-6 md:px-12">
 
             {/* Header */}
             <div className="mb-8">
