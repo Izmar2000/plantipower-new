@@ -14,17 +14,11 @@ function getLocale(request: NextRequest): string | undefined {
     return locale
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const pathname = request.nextUrl.pathname
 
-    // Ignore files (paths with extensions) to prevent redirect loops on assets
-    if (pathname.includes('.')) {
+    if (pathname.includes('.') || pathname.startsWith('/api')) {
         return
-    }
-
-    if (pathname.startsWith('/en/') || pathname === '/en') {
-        const newPath = pathname.replace(/^\/en/, '') || '/'
-        return NextResponse.redirect(new URL(newPath, request.url))
     }
 
     const pathnameIsMissingLocale = i18n.locales.every(
@@ -32,9 +26,8 @@ export function middleware(request: NextRequest) {
     )
 
     if (pathnameIsMissingLocale) {
-        // Rewrite internally to /en/... so [lang] captures it as English
         return NextResponse.rewrite(
-            new URL(`/en${pathname.startsWith('/') ? '' : '/'}${pathname}`, request.url)
+            new URL(`/en${pathname === '/' ? '' : pathname}`, request.url)
         )
     }
 }
