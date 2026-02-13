@@ -121,8 +121,8 @@ export default async function ProductAll12({
         sdsMeta: isNL ? 'SDS NL • pdf' : 'SDS EN • pdf',
         sdsLink: isNL ? '/docs/PlantiPower%20ALL12%20SDS%20NL.pdf' : '/images/products/sds-all12.pdf',
         labelTitle: isNL ? 'Het Officiële Etiket' : 'Official Label',
-        labelImage: isNL ? '/images/products/jerrycan-all12-nl-transparent.png' : '/images/products/label-all12-nl.png',
-        heroImage: isNL ? '/images/products/jerrycan-all12-nl-transparent.png' : '/images/products/plantipower-all12-transparant.png'
+        labelImage: isNL ? '/images/products/jerrycan-all12-nl-transparent.png?v=2' : '/images/products/label-all12-nl.png',
+        heroImage: isNL ? '/images/products/jerrycan-all12-nl-transparent.png?v=2' : '/images/products/plantipower-all12-transparant.png'
     };
 
     return (
