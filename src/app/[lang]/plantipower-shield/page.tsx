@@ -114,7 +114,8 @@ export default async function ProductShield({
         sdsMeta: isNL ? 'SDS NL • pdf' : 'SDS EN • pdf',
         sdsLink: isNL ? '/docs/PlantiPower%20Shield%20SDS%20NL.pdf' : '/images/products/sds-shield.pdf',
         labelTitle: isNL ? 'Het Officiële Etiket' : 'Official Label',
-        labelImage: '/images/products/label-shield-nl.png'
+        labelImage: '/images/products/label-shield-nl.png',
+        heroImage: isNL ? '/images/products/label-shield-nl.png' : '/images/products/plantipower-shield-transparant.png'
     };
 
     return (
@@ -183,7 +184,7 @@ export default async function ProductShield({
                                 <div className="absolute inset-0 bg-cyan-500/20 blur-[120px] rounded-full opacity-40 group-hover:opacity-60 transition-opacity duration-1000 animate-pulse-slow"></div>
                                 <div className="relative z-10 floating">
                                     <img
-                                        src="/images/products/plantipower-shield-transparant.png"
+                                        src={content.heroImage}
                                         alt="PlantiPower Shield Label"
                                         className="w-full h-auto object-contain max-h-[600px] drop-shadow-[0_40px_100px_rgba(6,182,212,0.4)] filter brightness-110 group-hover:brightness-125 transition-all duration-700 transform hover:scale-105"
                                     />

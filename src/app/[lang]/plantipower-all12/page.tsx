@@ -121,7 +121,8 @@ export default async function ProductAll12({
         sdsMeta: isNL ? 'SDS NL • pdf' : 'SDS EN • pdf',
         sdsLink: isNL ? '/docs/PlantiPower%20ALL12%20SDS%20NL.pdf' : '/images/products/sds-all12.pdf',
         labelTitle: isNL ? 'Het Officiële Etiket' : 'Official Label',
-        labelImage: '/images/products/label-all12-nl.png'
+        labelImage: '/images/products/label-all12-nl.png',
+        heroImage: isNL ? '/images/products/label-all12-nl.png' : '/images/products/plantipower-all12-transparant.png'
     };
 
     return (
@@ -186,7 +187,7 @@ export default async function ProductAll12({
                                 <div className="absolute inset-0 bg-lime-500/20 blur-[120px] rounded-full opacity-40 group-hover:opacity-60 transition-opacity duration-1000 animate-pulse-slow"></div>
                                 <div className="relative z-10 floating">
                                     <img
-                                        src="/images/products/plantipower-all12-transparant.png"
+                                        src={content.heroImage}
                                         alt="PlantiPower All12 Label"
                                         className="w-full h-auto object-contain max-h-[600px] drop-shadow-[0_40px_100px_rgba(132,204,22,0.4)] filter brightness-110 group-hover:brightness-125 transition-all duration-700 transform hover:scale-105"
                                     />
