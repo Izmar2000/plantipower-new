@@ -49,7 +49,7 @@ export default async function ProductShield({
             ? 'Verhoog de natuurlijke weerbaarheid van je gewas met PlantiPower Shield. Een geavanceerde barrière voor vitalere planten zonder residu.'
             : 'Increase the natural resilience of your crop with PlantiPower Shield. An advanced barrier for more vital plants without residue.',
         heroBadge: isNL ? 'Premium Beschermingssysteem' : 'Premium Protection System',
-        heroTitle: <><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">SHIELD</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">INVISIBLE FORCE.</span></>,
+        heroTitle: <><span className="text-white">SHIELD</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">INVISIBLE FORCE.</span></>,
         heroDesc: isNL
             ? 'Deze hoogwaardige bladvoeding wordt rechtstreeks op bladeren, stengels, bloemen en vruchten aangebracht, waardoor nutriënten snel en efficiënt worden opgenomen precies daar waar de plant ze het hardst nodig heeft.'
             : 'This high-quality foliar feed is applied directly to leaves, stems, flowers, and fruits, allowing nutrients to be absorbed quickly and efficiently exactly where the plant needs them most.',
