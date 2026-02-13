@@ -46,15 +46,9 @@ export async function generateMetadata(
       },
     },
     icons: {
-      icon: [
-        { url: '/favicon.ico?v=2' },
-        { url: '/icon.png?v=2', type: 'image/png' },
-      ],
-      apple: [
-        { url: '/apple-touch-icon.png?v=2' },
-      ],
+      icon: '/planti-favicon.png',
+      apple: '/planti-favicon.png',
     },
-    manifest: '/manifest.json',
   }
 }
 
