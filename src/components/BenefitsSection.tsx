@@ -1,3 +1,4 @@
+// Section displaying product benefits
 import { usePathname } from 'next/navigation';
 
 const BenefitsSection = () => {

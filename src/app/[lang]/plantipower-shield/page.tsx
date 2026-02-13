@@ -1,4 +1,5 @@
 
+// Product page for PlantiPower SHIELD
 import React from 'react';
 import {
     CheckCircle2,

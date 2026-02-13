@@ -1,4 +1,5 @@
 
+// Product page for PlantiPower ALL12
 import React from 'react';
 import NutrientGrid from '@/components/NutrientGrid';
 import {
