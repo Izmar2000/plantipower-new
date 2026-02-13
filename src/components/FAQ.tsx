@@ -31,7 +31,7 @@ const FAQ: React.FC<FAQProps> = ({ hideTitle = false, dict }) => {
 
       <div className={`max-w-7xl mx-auto px-6 relative z-10 ${hideTitle ? '' : ''}`}>
         {!hideTitle && (
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16 tracking-tight uppercase font-outfit">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-24 tracking-tight uppercase font-outfit">
             {content.title}<span className="text-lime-500">{content.titleAccent}</span>
           </h2>
         )}
