@@ -50,14 +50,14 @@ export default async function ProductShield({
             ? 'Verhoog de natuurlijke weerbaarheid van je gewas met PlantiPower Shield. Een geavanceerde barrière voor vitalere planten zonder residu.'
             : 'Increase the natural resilience of your crop with PlantiPower Shield. An advanced barrier for more vital plants without residue.',
         heroBadge: isNL ? 'Premium Beschermingssysteem' : 'Premium Protection System',
-        heroTitle: <><span className="text-white">SHIELD</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 whitespace-nowrap">INVISIBLE FORCE.</span></>,
+        heroTitle: <><span className="text-white">SHIELD</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 whitespace-nowrap">INVISIBLE FORCE</span></>,
         heroDesc: isNL
             ? 'Deze hoogwaardige bladvoeding wordt rechtstreeks op bladeren, stengels, bloemen en vruchten aangebracht, waardoor nutriënten snel en efficiënt worden opgenomen precies daar waar de plant ze het hardst nodig heeft.'
             : 'This high-quality foliar feed is applied directly to leaves, stems, flowers, and fruits, allowing nutrients to be absorbed quickly and efficiently exactly where the plant needs them most.',
         ctaDiscover: isNL ? 'ONTDEK MEER' : 'DISCOVER MORE',
         natural: isNL ? '100% NATUURLIJK' : '100% NATURAL',
         coreSystem: dict.Products.coreSystem,
-        protectionTitle: isNL ? <>Ongekende <span className="text-cyan-400">bescherming.</span></> : <>Unprecedented <span className="text-cyan-400">protection.</span></>,
+        protectionTitle: isNL ? <>Ongekende <span className="text-cyan-400">bescherming</span></> : <>Unprecedented <span className="text-cyan-400">protection</span></>,
         cards: [
             {
                 title: isNL ? "Natuurlijk beschermend schild" : "Natural protective shield",
@@ -79,7 +79,7 @@ export default async function ProductShield({
             }
         ],
         advantageBadge: dict.Products.advantageBadgeShield,
-        advantageTitle: isNL ? <>Kracht van <br /><span className="text-cyan-400">binnenuit.</span></> : <>Strength from <br /><span className="text-cyan-400">within.</span></>,
+        advantageTitle: isNL ? <>Kracht van <br /><span className="text-cyan-400">binnenuit</span></> : <>Strength from <br /><span className="text-cyan-400">within</span></>,
         advantageDesc: isNL
             ? 'PlantiPower Shield werkt niet door de natuur te forceren, maar door haar eigen systemen te ondersteunen. Het resultaat is een gewas dat zichzelf kan verdedigen en optimaal kan profiteren van de aanwezige nutriënten.'
             : 'PlantiPower Shield does not work by forcing nature, but by supporting its own systems. The result is a crop that can defend itself and optimally benefit from available nutrients.',
@@ -93,7 +93,7 @@ export default async function ProductShield({
         mineralsDesc: isNL ? 'Mineralen (>1% Calcium & >1% Magnesium)' : 'Minerals (>1% Calcium & >1% Magnesium)',
         tags: isNL ? 'MRL-vrij • Niet-toxisch • 100% Natuurlijk' : 'MRL-free • Non-toxic • 100% Natural',
         guideBadge: isNL ? 'Gebruikershandleiding' : 'User Guide',
-        guideTitle: isNL ? <>Eenvoudige <br /><span className="text-cyan-400">toepassing.</span></> : <>Simple <br /><span className="text-cyan-400">application.</span></>,
+        guideTitle: isNL ? <>Eenvoudige <br /><span className="text-cyan-400">toepassing</span></> : <>Simple <br /><span className="text-cyan-400">application</span></>,
         steps: [
             { step: "01", title: isNL ? "Goed schudden" : "Shake well", desc: isNL ? "Schud de fles gedurende 30 seconden voor gebruik om de mineralen optimaal te mengen." : "Shake the bottle for 30 seconds before use to mix the minerals optimally." },
             { step: "02", title: isNL ? "Juiste dosering" : "Correct dosage", desc: isNL ? "Doseer 15 ml PlantiPower Shield per 1 liter water voor een standaard mengverhouding." : "Dose 15 ml PlantiPower Shield per 1 liter of water for a standard mixing ratio." },

@@ -27,8 +27,8 @@
     },
     "GrowerFocus": {
         "badge": "THE PHILOSOPHY",
-        "title": "We change nothing.",
-        "titleAccent": "You optimise everything.",
+        "title": "We change nothing",
+        "titleAccent": "You optimise everything",
         "description": "Your nutrition schedule is the foundation of your success. PlantiPower is developed to strengthen this foundation, not replace it. We provide the technological support for stable uptake and consistent results, in every phase of cultivation.",
         "usps": [
             {
@@ -49,7 +49,7 @@
     "CropResults": {
         "badge": "The Result",
         "title": "Validated",
-        "titleHighlight": "practical results.",
+        "titleHighlight": "practical results",
         "validated": "Validated",
         "description": "From tomato to cucumber cultivation: PlantiPower maximizes absorption capacity in every professional setting.",
         "crops": [
@@ -72,8 +72,8 @@
     },
     "GlobalStandard": {
         "badge": "Industry Excellence",
-        "title": "Dutch quality.",
-        "titleHighlight": "Global impact.",
+        "title": "Dutch quality",
+        "titleHighlight": "Global impact",
         "desc": "Started in the agricultural heart of Venlo, the Netherlands, now a leading solution for professional growers worldwide.",
         "dutchMade": "100% Dutch Made",
         "premiumQuality": "Premium Quality",
@@ -99,7 +99,7 @@
     "ProblemSection": {
         "badge": "THE CHALLENGE",
         "title": "The problem in",
-        "titleAccent": "practice.",
+        "titleAccent": "practice",
         "description": "In a perfect world, every gram of nutrition you provide is actually absorbed by the plant. The reality is different. Factors such as pH fluctuations, cold water, or imbalance in the root zone often cause blockages.",
         "quote": "\"This causes unused nutrients to remain in the substrate - a waste of investment and a burden on the crop.\"",
         "closing": "By removing these 'blockers' with PlantiPower, you get the most out of your existing schedule."

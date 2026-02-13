@@ -50,14 +50,16 @@ export default async function ProductAll12({
         title: isNL ? 'PlantiPower All12 | Professionele Nutriënt Transport' : 'PlantiPower All12 | Professional Nutrient Transport',
         meta: isNL ? 'Ontdek PlantiPower All12 - de ultieme nutriënt transport technologie.' : 'Discover PlantiPower All12 - the ultimate nutrient transport technology.',
         heroBadge: isNL ? 'Biologische Innovatie' : 'Biological Innovation',
-        heroTitle: <><span className="text-white">ALL12</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600">TRANSPORT TECH.</span></>,
+        heroTitle: isNL 
+            ? <><span className="text-white">ALL12</span><br /><span className="text-white">NUTRIËNTEN</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600">TRANSPORTEUR</span></>
+            : <><span className="text-white">ALL12</span><br /><span className="text-white">NUTRIENT</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600">TRANSPORTER</span></>,
         heroDesc: isNL
             ? 'Doorbraak in passief transport. Waar fulvinezuren normaal stoppen bij 3 nutriënten, transporteert de ALL12 technologie het volledige spectrum.'
             : 'Breakthrough in passive transport. Where fulvic acids normally stop at 3 nutrients, ALL12 technology transports the full spectrum.',
         ctaDiscover: isNL ? 'ONTDEK DE KRACHT' : 'DISCOVER THE POWER',
         validated: isNL ? 'GEVALIDEERD' : 'VALIDATED',
         coreSystem: dict.Products.coreSystem,
-        efficiencyTitle: isNL ? <>Maximale <span className="text-lime-400">efficiëntie.</span></> : <>Maximum <span className="text-lime-400">efficiency.</span></>,
+        efficiencyTitle: isNL ? <>Maximale <span className="text-lime-400">efficiëntie</span></> : <>Maximum <span className="text-lime-400">efficiency</span></>,
         cards: [
             {
                 title: isNL ? "Passief Transport" : "Passive Transport",
@@ -79,13 +81,13 @@ export default async function ProductAll12({
             }
         ],
         spectrumBadge: dict.Products.spectrumBadge,
-        spectrumTitle: isNL ? <>De kracht van <br /><span className="text-lime-500">twaalf elementen.</span></> : <>The power of <br /><span className="text-lime-500">twelve elements.</span></>,
+        spectrumTitle: isNL ? <>De kracht van <br /><span className="text-lime-500">twaalf elementen</span></> : <>The power of <br /><span className="text-lime-500">twelve elements</span></>,
         spectrumDesc: isNL
             ? 'ALL12 technologie zorgt ervoor dat niet alleen de basis, maar ook de meest kritische sporenelementen effectief worden gebonden en getransporteerd.'
             : 'ALL12 technology ensures that not only the basics, but also the most critical trace elements are effectively bound and transported.',
         elementsTotal: isNL ? 'Elementen Totaal' : 'Total Elements',
         advantageBadge: dict.Products.advantageBadgeAll12,
-        advantageTitle: isNL ? <>Revolutionair <br /><span className="text-lime-500">transport.</span></> : <>Revolutionary <br /><span className="text-lime-500">transport.</span></>,
+        advantageTitle: isNL ? <>Revolutionair <br /><span className="text-lime-500">transport</span></> : <>Revolutionary <br /><span className="text-lime-500">transport</span></>,
         advantageDesc: isNL
             ? 'PlantiPower All12 is niet zomaar een toevoeging; het is de motor achter je voedingsschema. Door gebruik te maken van nano-transport technologie worden blokkades in de bodem opgeheven en bereiken voedingsstoffen de plant sneller dan ooit tevoren.'
             : 'PlantiPower All12 is not just an additive; it is the engine behind your nutrition schedule. By using nano-transport technology, soil blockages are removed and nutrients reach the plant faster than ever before.',
@@ -99,7 +101,7 @@ export default async function ProductAll12({
         fulvicDesc: isNL ? '3% Geconcentreerd' : '3% Concentrated',
         tags: isNL ? 'Substraatconditioner • pH-Stabiel • Nano-Tech' : 'Substrate conditioner • pH-Stable • Nano-Tech',
         guideBadge: isNL ? 'Gebruikershandleiding' : 'User Guide',
-        guideTitle: isNL ? <>Eenvoudige <br /><span className="text-lime-500">toepassing.</span></> : <>Simple <br /><span className="text-lime-500">application.</span></>,
+        guideTitle: isNL ? <>Eenvoudige <br /><span className="text-lime-500">toepassing</span></> : <>Simple <br /><span className="text-lime-500">application</span></>,
         steps: [
             { step: "01", title: isNL ? "Goed schudden" : "Shake well", desc: isNL ? "Zorg voor een homogene menging door de jerrycan voor gebruik krachtig te schudden." : "Ensure homogeneous mixing by shaking the jerrycan vigorously before use." },
             { step: "02", title: isNL ? "Optimale dosering" : "Optimal dosage", desc: isNL ? "Gebruik 5 ml PlantiPower All12 per 1 liter voedingswater voor een maximaal effect." : "Use 5 ml PlantiPower All12 per 1 liter of nutrient water for maximum effect." },
