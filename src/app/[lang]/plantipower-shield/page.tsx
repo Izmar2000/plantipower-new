@@ -148,7 +148,7 @@ export default async function ProductShield({
 
                     <div className="max-w-7xl mx-auto px-6 relative z-10">
                         <div className="grid lg:grid-cols-2 gap-20 items-start">
-                            <div className="animate-reveal lg:pt-12">
+                            <div className="animate-reveal lg:pt-6">
                                 {/* BADGE */}
                                 <div className="mb-8">
                                     <div className="inline-flex items-center px-4 py-2 bg-[#0a1629] border border-blue-900/50 rounded-sm">
