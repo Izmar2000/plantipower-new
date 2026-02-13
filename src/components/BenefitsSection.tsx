@@ -18,7 +18,7 @@ const BenefitsSection = () => {
         badge: isNL ? "Innovatieve Transport Technologie" : "Innovative Transport Technology",
         title: isNL ? "Van " : "From ",
         titleAccent: isNL ? "3 naar 12" : "3 to 12",
-        titleSuffix: isNL ? " Nutriënten. De kracht van ALL12®." : " Nutrients. The power of ALL12®.",
+        titleSuffix: isNL ? " Nutriënten. De kracht van ALL12." : " Nutrients. The power of ALL12.",
         desc: isNL
             ? "Normaal gesproken binden fulvinezuren slechts 3 nutriënten (calcium, magnesium en ijzer). PlantiPower gaat veel verder. Onze technologie transporteert niet alleen deze mineralen, maar bindt en levert een volledig spectrum van 12 essentiële nutriënten direct aan de wortels."
             : "Normally, fulvic acids bind only 3 nutrients (calcium, magnesium, and iron). PlantiPower goes much further. Our technology not only transports these minerals but binds and delivers a full spectrum of 12 essential nutrients directly to the roots.",

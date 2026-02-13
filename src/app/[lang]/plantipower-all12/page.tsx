@@ -51,8 +51,8 @@ export default async function ProductAll12({
         heroBadge: isNL ? 'Biologische Innovatie' : 'Biological Innovation',
         heroTitle: <><span className="text-white">ALL12</span><br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600">TRANSPORT TECH.</span></>,
         heroDesc: isNL
-            ? 'Doorbraak in passief transport. Waar fulvinezuren normaal stoppen bij 3 nutriënten, transporteert de ALL12® technologie het volledige spectrum.'
-            : 'Breakthrough in passive transport. Where fulvic acids normally stop at 3 nutrients, ALL12® technology transports the full spectrum.',
+            ? 'Doorbraak in passief transport. Waar fulvinezuren normaal stoppen bij 3 nutriënten, transporteert de ALL12 technologie het volledige spectrum.'
+            : 'Breakthrough in passive transport. Where fulvic acids normally stop at 3 nutrients, ALL12 technology transports the full spectrum.',
         ctaDiscover: isNL ? 'ONTDEK DE KRACHT' : 'DISCOVER THE POWER',
         validated: isNL ? 'GEVALIDEERD' : 'VALIDATED',
         coreSystem: dict.Products.coreSystem,
