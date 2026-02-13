@@ -115,7 +115,7 @@ export default async function ProductShield({
         sdsLink: isNL ? '/docs/PlantiPower%20Shield%20SDS%20NL.pdf' : '/images/products/sds-shield.pdf',
         labelTitle: isNL ? 'Het Officiële Etiket' : 'Official Label',
         labelImage: '/images/products/label-shield-nl.png',
-        heroImage: isNL ? '/images/products/label-shield-nl.png' : '/images/products/plantipower-shield-transparant.png'
+        heroImage: '/images/products/plantipower-shield-transparant.png'
     };
 
     return (
