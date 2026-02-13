@@ -47,11 +47,11 @@ export async function generateMetadata(
     },
     icons: {
       icon: [
-        { url: '/favicon.ico' },
-        { url: '/icon.png', type: 'image/png' },
+        { url: '/favicon.ico?v=2' },
+        { url: '/icon.png?v=2', type: 'image/png' },
       ],
       apple: [
-        { url: '/apple-touch-icon.png' },
+        { url: '/apple-touch-icon.png?v=2' },
       ],
     },
     manifest: '/manifest.json',
