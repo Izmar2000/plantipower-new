@@ -121,8 +121,8 @@ export default async function ProductAll12({
         sdsMeta: isNL ? 'SDS NL • pdf' : 'SDS EN • pdf',
         sdsLink: isNL ? '/docs/PlantiPower%20ALL12%20SDS%20NL.pdf' : '/images/products/sds-all12.pdf',
         labelTitle: isNL ? 'Het Officiële Etiket' : 'Official Label',
-        labelImage: isNL ? '/images/products/all12-nl.svg' : '/images/products/label-all12-nl.png',
-        heroImage: isNL ? '/images/products/all12-nl.svg' : '/images/products/plantipower-all12-transparant.png'
+        labelImage: isNL ? '/images/products/all12-nl-trans.svg' : '/images/products/label-all12-nl.png',
+        heroImage: isNL ? '/images/products/all12-nl-trans.svg' : '/images/products/plantipower-all12-transparant.png'
     };
 
     return (
