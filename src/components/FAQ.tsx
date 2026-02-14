@@ -21,7 +21,7 @@ const FAQ: React.FC<FAQProps> = ({ hideTitle = false, dict }) => {
 
   return (
     <section
-      className={`relative overflow-hidden ${hideTitle ? 'bg-transparent py-0' : 'bg-[#011410] py-24'}`}
+      className={`relative overflow-hidden ${hideTitle ? 'bg-transparent py-0' : 'bg-[#011410] pt-24 pb-48'}`}
       id="faq"
     >
       {/* Background Glow - only show if title is shown (main section usage), otherwise hide to avoid stacking glows */}
