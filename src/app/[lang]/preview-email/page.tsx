@@ -38,7 +38,7 @@ export default function PreviewEmailPage() {
 
             <div className="max-w-7xl mx-auto mb-12 text-center">
                 <h1 className="text-white text-2xl font-black uppercase tracking-widest">Premium Newsletter Preview</h1>
-                <p className="text-emerald-100/40">Dit is de nieuwe "Professional Growth" stijl gebaseerd op je voorbeelden.</p>
+                <p className="text-emerald-100/40">Zonder 'Made in Holland' voor een compacter design.</p>
             </div>
 
             <div style={{
@@ -56,9 +56,8 @@ export default function PreviewEmailPage() {
                     <table width="100%" cellPadding="0" cellSpacing="0">
                         <tbody>
                             <tr>
-                                <td align="left">
-                                    <img src="https://irp.cdn-website.com/480e14da/dms3rep/multi/Planti-Power-Logo-.png" alt="PlantiPower" style={{ height: '40px' }} />
-                                    <div style={{ color: '#84cc16', fontSize: '10px', fontWeight: 800, letterSpacing: '2px', marginTop: '5px', textTransform: 'uppercase' }}>Made in Holland</div>
+                                <td align="left" valign="top">
+                                    <img src="https://irp.cdn-website.com/480e14da/dms3rep/multi/Planti-Power-Logo-.png" alt="PlantiPower" style={{ height: '32px' }} />
                                 </td>
                                 <td align="right" valign="top">
                                     <div style={{ textAlign: 'right', color: 'rgba(255,255,255,0.4)', fontSize: '10px', fontWeight: 800, letterSpacing: '1px', textTransform: 'uppercase' }}>
@@ -72,7 +71,7 @@ export default function PreviewEmailPage() {
                 </div>
 
                 {/* Hero Section */}
-                <div style={{ position: 'relative', width: '100%', height: '400px', marginTop: '40px', overflow: 'hidden' }}>
+                <div style={{ position: 'relative', width: '100%', height: '400px', marginTop: '30px', overflow: 'hidden' }}>
                     <img src={headerImage} alt="Hero" style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
                     <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(0deg, #011410 0%, transparent 100%)', padding: '40px' }}>
                         <div style={{ display: 'inline-block', backgroundColor: '#84cc16', color: '#011410', fontSize: '10px', fontWeight: 900, padding: '4px 12px', borderRadius: '4px', textTransform: 'uppercase', marginBottom: '20px', letterSpacing: '1px' }}>
@@ -84,7 +83,7 @@ export default function PreviewEmailPage() {
                     </div>
                 </div>
 
-                {/* Content Body */}
+                {/* Content Body ... rest remains the same */}
                 <div style={{ padding: '0 40px' }}>
                     <div style={{ borderLeft: '4px solid #84cc16', paddingLeft: '24px', margin: '40px 0', fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', fontSize: '18px', lineHeight: '1.6' }}>
                         "De perfecte oogst begint bij een gezonde bodem. Niet alleen wat je ziet, maar vooral wat je niet ziet onder de oppervlakte."
@@ -143,8 +142,7 @@ export default function PreviewEmailPage() {
                     </div>
                 </div>
 
-                {/* Footer */}
-                <div style={{ background: 'rgba(0,0,0,0.3)', padding: '50px 40px', textAlign: 'center' }}>
+                <div style={{ textAlign: 'center', padding: '50px 40px', background: 'rgba(0,0,0,0.3)' }}>
                     <div style={{ color: 'rgba(255,255,255,0.2)', fontSize: '10px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '2px' }}>
                         L.J. Costerstraat 48  |  5916 PS Venlo, NL<br />
                         <a href="https://plantipower.com" style={{ color: '#84cc16', textDecoration: 'none', marginTop: '15px', display: 'inline-block', fontWeight: 900, letterSpacing: '2px' }}>PLANTIPOWER.COM</a>

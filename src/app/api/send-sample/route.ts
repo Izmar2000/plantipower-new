@@ -90,9 +90,8 @@ export async function POST(request: Request) {
               <div style="padding: 40px 40px 0 40px;">
                 <table width="100%" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td align="left">
-                      <img src="https://irp.cdn-website.com/480e14da/dms3rep/multi/Planti-Power-Logo-.png" alt="PlantiPower" style="height: 40px;" />
-                      <div style="color: #84cc16; font-size: 10px; font-weight: 800; letter-spacing: 2px; margin-top: 5px; text-transform: uppercase;">Made in Holland</div>
+                    <td align="left" valign="top">
+                      <img src="https://irp.cdn-website.com/480e14da/dms3rep/multi/Planti-Power-Logo-.png" alt="PlantiPower" style="height: 32px;" />
                     </td>
                     <td align="right" valign="top">
                       <div style="${emailStyles.newsletterInfo}">
@@ -105,7 +104,7 @@ export async function POST(request: Request) {
               </div>
 
               <!-- Hero Image with Overlay -->
-              <div style="position: relative; width: 100%; height: 400px; margin-top: 40px; overflow: hidden;">
+              <div style="position: relative; width: 100%; height: 400px; margin-top: 30px; overflow: hidden;">
                 <img src="${headerImage}" style="width: 100%; height: 400px; object-fit: cover;" />
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(0deg, #011410 0%, transparent 100%); padding: 40px;">
                   <div style="${emailStyles.tag}">Sample Request</div>
