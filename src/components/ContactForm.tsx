@@ -24,10 +24,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ dict, lang }) => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage(null);
 
     try {
       const response = await fetch("/api/send-contact", {
@@ -36,16 +38,22 @@ const ContactForm: React.FC<ContactFormProps> = ({ dict, lang }) => {
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
         setIsSuccess(true);
         setFormData({ name: '', company: '', email: '', message: '' });
+      } else {
+        setErrorMessage(result.error || "Er is iets misgegaan bij het verzenden.");
       }
     } catch (error) {
       console.error("Submission error:", error);
+      setErrorMessage("Netwerkfout or serverfout.");
     } finally {
       setIsSubmitting(false);
     }
   };
+
 
   return (
     <section className="py-24 bg-transparent" id="contact">
@@ -141,12 +149,18 @@ const ContactForm: React.FC<ContactFormProps> = ({ dict, lang }) => {
                       className="w-full bg-[#011a14]/50 border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-lime-500/50 text-white placeholder-emerald-700 resize-none transition-all font-medium"
                     ></textarea>
                   </div>
+                  {errorMessage && (
+                    <div className="bg-red-500/20 border border-red-500/50 text-red-200 p-4 rounded-2xl text-sm font-bold text-center">
+                      ⚠️ {errorMessage}
+                    </div>
+                  )}
                   <button
                     disabled={isSubmitting}
                     className="w-full bg-lime-500 hover:bg-white text-emerald-950 font-black py-5 rounded-2xl transition-all shadow-2xl shadow-lime-500/20 transform active:scale-[0.98] uppercase tracking-widest text-sm disabled:opacity-50"
                   >
                     {isSubmitting ? t.sending : t.btnSend}
                   </button>
+
                 </form>
               )}
             </div>

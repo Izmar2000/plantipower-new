@@ -1,8 +1,6 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY || 're_123');
-
 const emailStyles = {
   container: 'background-color: #011410; color: #ffffff; font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 40px; border-radius: 40px; border: 1px solid rgba(255,255,255,0.05);',
   header: 'margin-bottom: 40px; text-align: center;',
@@ -18,11 +16,22 @@ export async function POST(request: Request) {
   try {
     const { name, company, email, message } = await request.json();
 
-    // 1. Send to HQ
-    await resend.emails.send({
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey || apiKey === 're_123') {
+      return NextResponse.json({
+        error: 'Configuratie fout: RESEND_API_KEY is niet ingesteld in Vercel. Controleer je Environment Variables.'
+      }, { status: 500 });
+    }
+
+    const resend = new Resend(apiKey);
+
+    // 1. Send to HQ (info@plantipower.com)
+    // IMPORTANT: Use the verified domain mail.plantipower.com
+    const hqResult = await resend.emails.send({
       from: 'PlantiPower HQ <info@mail.plantipower.com>',
       to: 'info@plantipower.com',
-      replyTo: 'info@plantipower.com',
+      replyTo: email,
       subject: `Nieuw Contactbericht: ${company || name}`,
       html: `
         <div style="${emailStyles.container}">
@@ -45,6 +54,11 @@ export async function POST(request: Request) {
       `
     });
 
+    if (hqResult.error) {
+      console.error('Resend Error:', hqResult.error);
+      return NextResponse.json({ error: `Resend Fout: ${hqResult.error.message}` }, { status: 400 });
+    }
+
     // 2. Confirmation to User
     await resend.emails.send({
       from: 'PlantiPower <info@mail.plantipower.com>',
@@ -59,13 +73,14 @@ export async function POST(request: Request) {
 
           <div style="${emailStyles.header}">
              <div style="${emailStyles.title}">Bedankt voor je bericht</div>
-             <div style="font-size: 18px; color: #ffffff; margin-top: 10px;">We nemen zo snel mogelijk contact met je op.</div>
+             <div style="font-size: 18px; color: #ffffff; margin-top: 10px;">Beste ${name}, we nemen zo snel mogelijk contact met je op.</div>
           </div>
 
           <div style="${emailStyles.card}">
             <p style="color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.6;">
-              Hoi ${name},<br/><br/>
-              Bedankt voor het contact opnemen met PlantiPower. We hebben je bericht goed ontvangen en een van onze experts zal dit bekijken. Je hoort snel van ons!
+              Bedankt voor je aanvraag bij PlantiPower. Onze experts zullen deze zo snel mogelijk in behandeling nemen.<br/><br/>
+              Groet,<br/>
+              Team PlantiPower
             </p>
           </div>
 
@@ -81,6 +96,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    return NextResponse.json({ error: (error as Error).message }, { status: 500 });
+    console.error('API Error:', error);
+    return NextResponse.json({ error: `Server Fout: ${error instanceof Error ? error.message : 'Onbekend'}` }, { status: 500 });
   }
 }
